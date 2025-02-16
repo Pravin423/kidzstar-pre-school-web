@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KidzStar</title>
+    <link rel="stylesheet" href="/public/css/style.css" />
+  </head>
+
+  <body>
+    <div class="announcement">
+      <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="7">
+        Admissions Open!!!  Apply Now - Limited Seats Available - Playgroup - Nursery - Jr.Kg - Sr.Kg
+      </marquee>
+      <a href="/admission"><button class="btnapply">Enquiry Now</button></a>
+    </div>
+    </div>
+    <header><%- include('partials/navbar') %></header>
+    <div class="bg-section">
+      <div class="container texttt">
+        <h1 class="bgtext">
+          "Magical Beginnings, <br />
+          <span class="life1"
+            >Lifelong <span class="life2">Learnings</span></span
+          >!"
+        </h1>
+        <p class="text2">
+          The early years of childhood are the most magical – a time of wonder,
+          exploration, and endless possibilities. Our mission is to provide a
+          strong foundation, shaping young minds into confident learners and
+          compassionate individuals.
+        </p>
+        <div class="apply-btn">
+          <button class="btn1">Explore Courses</button>
+        </div>
+      </div>
+      <div class="container">
+        <img class="children" src="/images/children.png" alt="children" />
+      </div>
+      
+    </div>
+    <br />
+    <div class="curve">
+      <img class="curvee" src="/images/curve2.png" alt="curve" />
+    </div>
+
+    <div class="containeryellow">
+      <div class="container-ye">
+        <h1 class="bgtextt">
+          Kidzstar Pre Primary School
+
+
+        </h1>
+        <h1 class="bgtexttt">"At Kidzstar Pre Primary School, our mission is to provide a safe, stimulating, and inclusive environment where children are encouraged to explore, learn, and develop at their own pace. Through a blend of hands-on activities, creative play, and personalized attention, we aim to build a strong foundation in early childhood education. We are committed to fostering emotional, social, cognitive, and physical growth, ensuring each child is prepared for their next steps in their educational journey."</h1>
+        <div class="apply-btnn">
+          <button class="btnn1">Explore Courses</button>
+        </div>
+      </div>
+      <div class="apple1">
+        <img src="/images/apple1.png" alt="" />
+      </div>
+    </div>
+    <br />
+
+    <div class="curve">
+      <img class="curvee" src="/images/curve3.png" alt="curve" />
+    </div>
+    <div class="containerpink">
+      <div class="text-content">
+        <h1 class="main-heading">
+          A Nurturing <br />
+          Environment Where <br />
+          Every Child Thrives
+        </h1>
+      </div>
+      <div class="vision-content">
+        <h1 class="vision-heading">Our Vision</h1>
+        <p class="vision-text">
+          "To create a nurturing and innovative learning environment where young minds can explore, grow, and develop essential skills through play-based learning, fostering creativity, curiosity, and a love for lifelong learning. We aim to provide a strong foundation for each child, empowering them to thrive academically, socially, and emotionally in a supportive, inclusive, and joyful setting."
+        </p>
+      </div>
+    </div>
+
+    <!-- __________________________2modules pending___________________________ -->
+
+    <br /><br /><br /><br />
+
+    <header><%- include('partials/footer') %></header>
+  </body>
+</html>
+<style>
+  @media screen and (min-width: 1024px) {
+    .bg-section,
+    .containeryellow {
+      width: 100%;
+      max-width: 100%; /* Ensure full width */
+    }
+
+    .curvee {
+      width: 100%; /* Full width for curve */
+    }
+
+    .children {
+      margin-left: auto; /* Center alignment */
+      margin-right: auto;
+    }
+
+    .text2 {
+      width: 500px;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  @keyframes blinkColors {
+    0% {
+      background-color: #ffaa00;
+      color: black;
+    }
+    25% {
+      background-color: #ff4500;
+      color: white;
+    }
+    50% {
+      background-color: #b50bfe;
+      color: yellow;
+    }
+    75% {
+      background-color: #00c3ff;
+      color: black;
+    }
+    100% {
+      background-color: #ffaa00;
+      color: black;
+    }
+  }
+  .btnapply {
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    animation: blinkColors 0.6s infinite;
+  }
+
+  .btnapply:hover {
+    background-color: #00ff04;
+    color: rgb(0, 0, 0);
+    animation: none; /* Stops blinking on hover */
+  }
+  .bg-section {
+    background-image: url("/images/background.png");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 100%;
+    display: flex;
+  }
+  .children {
+    margin-top: 70px;
+    margin-right: 20px;
+  }
+  .containeryellow {
+    display: flex;
+    background-position: start;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+  }
+
+  .texttt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  .announcement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #98f2fc;
+    width: screen;
+    border-bottom: 1px solid #000;
+}
+
+.marquee-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    flex-grow: 1; /* Allows text to take available space */
+}
+
+.btnapply {
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #ff3c8a;
+    color: white;
+    font-weight: bold;
+    margin-left: 20px; /* Creates spacing from the text */
+}
+
+.btnapply:hover {
+    background-color: #00ff04;
+    color: black;
+}
+
+
+
+  .text {
+    font-family: "Arial Narrow", Arial, sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  .img,
+  .img1 {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bgtext {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Arial Narrow", Arial, sans-serif;
+  }
+
+  .text2 {
+    align-items: center;
+    color: #c8c3c3;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    width: 360px;
+  }
+
+  .btn1,
+  .btnn1 {
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    margin-top: 10px;
+  }
+
+  .btn1 {
+    background-color: #ff3c8a;
+    color: white;
+  }
+
+  .btn1:hover {
+    background-color: #fea439;
+    color: black;
+  }
+
+  .btnn1 {
+    background-color: #fea439;
+    color: white;
+    margin-left: 210px;
+  }
+  .btnn1:hover {
+    background-color: #ff3c8a;
+    color: black;
+  }
+  .containeryellow {
+    display: flex;
+    justify-content: space-between;
+
+    background-image: url("/images/background2.png");
+    background-size: cover;
+    background-position: center;
+    height: 560px;
+    width: 100%;
+    display: flex;
+  }
+  .container-ye {
+    margin-left: 70px;
+    margin-top: 50px;
+  }
+  .apple1 {
+    margin-top: 40px;
+    margin-right: 40px;
+  }
+  @keyframes smoothBlink {
+    0% { color: #040997; }
+    25% { color: #1680f0; }
+    50% { color: #3492df; }
+    75% { color: #0041a8; }
+    100% { color: #020567; }
+}
+
+@keyframes blinkUnderline {
+    0% { text-decoration: underline transparent; }
+    50% { text-decoration: underline #aeaeae; }
+    100% { text-decoration: underline transparent; }
+}
+
+.bgtextt {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    text-align: center;
+    color: #020567;
+    animation: smoothBlink 3s infinite ease-in-out, blinkUnderline 2s infinite ease-in-out;
+}
+
+  .bgtexttt {
+    text-align: center;
+    color: #878888;
+    font-size: 24px;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+
+  .body {
+    font-family: "Nunito", sans-serif;
+  }
+  .containerpink {
+    background-image: url("/images/boynew2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fef7f1;
+
+    height: 560px;
+    width: 100%;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .main-heading {
+    color: #333;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 50px;
+  }
+
+  .vision-content {
+    flex: 1;
+    text-align: left;
+    max-width: 40%;
+  }
+
+  .vision-heading {
+    padding-left: 250px;
+    color: #333;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .vision-text {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    color: #636363;
+    line-height: 1.6;
+  }
+</style>

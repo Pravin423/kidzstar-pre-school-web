@@ -1,0 +1,64 @@
+<!-- <h1>Admission Form</h1>
+<form action="/admission" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone" required>
+    <input type="text" name="childName" placeholder="Child's Name" required>
+    <input type="number" name="childAge" placeholder="Child's Age" required>
+    <textarea name="message" placeholder="Additional Message"></textarea>
+    <button type="submit">Apply</button>
+</form> -->
+<div class="con">
+    <div class="container">
+        <img class="children" src="/images/children.png" alt="children" />
+        <svg class="border-animation">
+          <rect x="0" y="0" width="100%" height="100%" />
+        </svg>
+      </div>
+      
+</div>
+
+<style>
+    .con{
+        background-color: black;
+    }
+    .container {
+  position: relative;
+  display: inline-block;
+}
+
+.children {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px; /* Adjust as needed */
+  height: auto;
+}
+
+/* SVG Border Animation */
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: white;
+  stroke-width: 4;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: borderGlow 3s linear infinite;
+}
+
+/* Animate the border outline */
+@keyframes borderGlow {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+</style>
