@@ -382,7 +382,7 @@
     }
     
     .playgroup-item img {
-        width: 100%;
+        width: screen;
         max-width: 400px;
         height: auto;
         object-fit: contain;
