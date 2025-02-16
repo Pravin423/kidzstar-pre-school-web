@@ -81,6 +81,11 @@
       </div>
     </div>
 
+    <br>
+    <div class="curve">
+      <img class="curvee" src="/images/curve4.png" alt="curve" />
+    </div>
+
     <!-- __________________________2modules pending___________________________ -->
 
     <br /><br /><br /><br />
@@ -373,4 +378,19 @@
     color: #636363;
     line-height: 1.6;
   }
+  @keyframes waveAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.curvee {
+    animation: waveAnimation 1.5s ease-in-out infinite;
+}
 </style>
