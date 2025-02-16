@@ -20,9 +20,11 @@ router.get("/admission", (req, res) => {
 
 // Handle Admission Form Submission
 router.post("/admission", async (req, res) => {
+
     try {
-        const { name, email, phone, childName, childAge, message } = req.body;
-        await Admission.create({ name, email, phone, childName, childAge, message });
+        const { name, email, phone, childName, childAge, message,bookslot } = req.body;
+        const formattedDate = new Date(bookslot)
+        await Admission.create({ name, email, phone, childName, childAge, message, bookslot: formattedDate  });
         res.redirect("/success");
     } catch (error) {
         console.error(error);

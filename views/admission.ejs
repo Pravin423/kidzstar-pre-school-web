@@ -5,30 +5,24 @@
     <input type="tel" name="phone" placeholder="Your Phone" required>
     <input type="text" name="childName" placeholder="Child's Name" required>
     <input type="number" name="childAge" placeholder="Child's Age" required>
-    <textarea name="message" placeholder="Additional Message"></textarea>
+    <textarea name="message" placeholder="Additional Message"></textarea>   
+    <input type="datetime-local" name="bookslot" placeholder="Book a slot" required>
     <button type="submit">Apply</button>
 </form> -->
-<div class="curve">
-    <img class="curvee" src="/images/curve4.png" alt="curve" />
-  </div> 
-<style>
 
-@keyframes waveAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(5px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
+<h1>Admission Form</h1>
+<form action="/admission" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone" required>
+    <input type="text" name="childName" placeholder="Child's Name" required>
+    <input type="number" name="childAge" placeholder="Child's Age" required>
+    <textarea name="message" placeholder="Additional Message"></textarea>   
+    
+    <!-- Booking date and time selection -->
+    <label for="bookslot">Book a Slot:</label>
+    <input type="datetime-local" id="bookslot" name="bookslot" required>
 
-.curvee {
-    animation: waveAnimation 1.5s ease-in-out infinite;
-}
+    <button type="submit">Apply</button>
+</form>
 
-
-
-</style>

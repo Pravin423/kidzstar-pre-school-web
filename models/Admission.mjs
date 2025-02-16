@@ -6,10 +6,11 @@ const AdmissionSchema = new mongoose.Schema({
     phone: String,
     childName: String,
     childAge: Number,
-    message: String
+    message: String,
+    bookslot: Date,
 });
 
-const Admission = mongoose.model("Admission", AdmissionSchema);
+const Admission = mongoose.model("Admission_Enquiry", AdmissionSchema);
 
 export default Admission;
     
