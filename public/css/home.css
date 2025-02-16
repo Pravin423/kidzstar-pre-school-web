@@ -1,0 +1,409 @@
+
+
+    @media screen and (min-width: 1024px) {
+
+        .bg-section,
+        .containeryellow {
+        width: 100%;
+        max-width: 100%;
+        /* Ensure full width */
+        }
+
+        .curvee {
+        width: 100%;
+        /* Full width for curve */
+        }
+
+        .children {
+        margin-left: auto;
+        /* Center alignment */
+        margin-right: auto;
+        }
+
+        .text2 {
+        width: 500px;
+        }
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    @keyframes blinkColors {
+        0% {
+        background-color: #ffaa00;
+        color: black;
+        }
+
+        25% {
+        background-color: #ff4500;
+        color: white;
+        }
+
+        50% {
+        background-color: #b50bfe;
+        color: yellow;
+        }
+
+        75% {
+        background-color: #00c3ff;
+        color: black;
+        }
+
+        100% {
+        background-color: #ffaa00;
+        color: black;
+        }
+    }
+
+    .btnapply {
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s;
+        animation: blinkColors 0.6s infinite;
+    }
+
+    .btnapply:hover {
+        background-color: #00ff04;
+        color: rgb(0, 0, 0);
+        animation: none;
+        /* Stops blinking on hover */
+    }
+
+    .bg-section {
+        background-image: url("/images/background.png");
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+        width: 100%;
+        display: flex;
+    }
+
+    .children {
+        margin-top: 70px;
+        margin-right: 20px;
+    }
+
+    .containeryellow {
+        display: flex;
+        background-position: start;
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+    }
+
+    .texttt {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    .announcement {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #98f2fc;
+        width: screen;
+        border-bottom: 1px solid #000;
+    }
+
+    .marquee-text {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        flex-grow: 1;
+        /* Allows text to take available space */
+    }
+
+    .btnapply {
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: #ff3c8a;
+        color: white;
+        font-weight: bold;
+        margin-left: 20px;
+        /* Creates spacing from the text */
+    }
+
+    .btnapply:hover {
+        background-color: #00ff04;
+        color: black;
+    }
+
+
+
+    .text {
+        font-family: "Arial Narrow", Arial, sans-serif;
+        color: white;
+        text-align: center;
+    }
+
+    .img,
+    .img1 {
+        width: 30px;
+        height: 30px;
+    }
+
+    .bgtext {
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Arial Narrow", Arial, sans-serif;
+    }
+
+    .text2 {
+        align-items: center;
+        color: #c8c3c3;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        font-family: "Arial Narrow", Arial, sans-serif;
+        width: 360px;
+    }
+
+    .btn1,
+    .btnn1 {
+        cursor: pointer;
+        border: none;
+        border-radius: 50px;
+        padding: 15px 30px;
+        margin-top: 10px;
+    }
+
+    .btn1 {
+        background-color: #ff3c8a;
+        color: white;
+    }
+
+    .btn1:hover {
+        background-color: #fea439;
+        color: black;
+    }
+
+    .btnn1 {
+        background-color: #fea439;
+        color: white;
+        margin-left: 210px;
+    }
+
+    .btnn1:hover {
+        background-color: #ff3c8a;
+        color: black;
+    }
+
+    .containeryellow {
+        display: flex;
+        justify-content: space-between;
+
+        background-image: url("/images/background2.png");
+        background-size: cover;
+        background-position: center;
+        height: 560px;
+        width: 100%;
+        display: flex;
+    }
+
+    .container-ye {
+        margin-left: 70px;
+        margin-top: 50px;
+    }
+
+    .apple1 {
+        margin-top: 40px;
+        margin-right: 40px;
+    }
+
+    @keyframes smoothBlink {
+        0% {
+        color: #040997;
+        }
+
+        25% {
+        color: #1680f0;
+        }
+
+        50% {
+        color: #3492df;
+        }
+
+        75% {
+        color: #0041a8;
+        }
+
+        100% {
+        color: #020567;
+        }
+    }
+
+    @keyframes blinkUnderline {
+        0% {
+        text-decoration: underline transparent;
+        }
+
+        50% {
+        text-decoration: underline #aeaeae;
+        }
+
+        100% {
+        text-decoration: underline transparent;
+        }
+    }
+
+    .bgtextt {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: "Nunito", sans-serif;
+        text-align: center;
+        color: #020567;
+        animation: smoothBlink 3s infinite ease-in-out, blinkUnderline 2s infinite ease-in-out;
+    }
+
+    .bgtexttt {
+        text-align: center;
+        color: #878888;
+        font-size: 24px;
+    }
+
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap");
+
+    .body {
+        font-family: "Nunito", sans-serif;
+    }
+
+    .containerpink {
+        background-image: url("/images/boynew2.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fef7f1;
+
+        height: 560px;
+        width: 100%;
+    }
+
+    .text-content {
+        flex: 1;
+    }
+
+    .main-heading {
+        color: #333;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: start;
+        margin-left: 50px;
+    }
+
+    .vision-content {
+        flex: 1;
+        text-align: left;
+        max-width: 40%;
+    }
+
+    .vision-heading {
+        padding-left: 250px;
+        color: #333;
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .vision-text {
+        text-align: center;
+        width: 100%;
+        font-size: 20px;
+        color: #636363;
+        line-height: 1.6;
+    }
+
+    @keyframes waveAnimation {
+        0% {
+        transform: translateY(0);
+        }
+
+        50% {
+        transform: translateY(15px);
+        }
+
+        100% {
+        transform: translateY(0);
+        }
+    }
+
+    .curvee {
+        animation: waveAnimation 1.5s ease-in-out infinite;
+    }
+
+    .programs {
+        background: url("/images/programbackground.png");
+        background-size: cover;
+        display: flex;
+        margin-top: 50px;
+        width: screen;
+        height: 500px;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    /* ----------------------------- */
+
+    .playgroup-container {
+        background-image: url("/images/programback.jpg");
+        background-size: cover;
+        display: flex;
+        width: screen;
+        height: auto;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .playgroup-item {
+        flex: 1;
+        max-width: 400px;
+        text-align: center;
+    }
+    
+    .playgroup-item img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+    
+    .playgroup-item p {
+        background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+        padding: 10px; /* Add some space around the text */
+        border-radius: 8px; /* Rounded corners */
+        text-align: center; /* Center text */
+        font-weight: bold; /* Make text stand out */
+        width: fit-content; /* Adjust width to content */
+        margin: 10px auto; /* Center the text block */
+    }
+    
+    /* New styling for info images */
+    .info-image {
+        width: 70px;  /* Reduced from 80% */  /* Reduced from 300px */
+        height: auto;
+        margin-top: 10px;
+        border-radius: 10px;
+    }
+    

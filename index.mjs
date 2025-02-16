@@ -16,7 +16,7 @@ const __dirname = path.dirname(__filename);
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Set view engine to EJS
 app.set("view engine", "ejs");

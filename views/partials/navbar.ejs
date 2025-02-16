@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/navbar.css" />
 <div class="navbar">
     <div class="navbar-inner">
         <div class="logo">
@@ -5,141 +6,20 @@
                 <img class="logoimg" src="/images/logo.png" alt="logo" />
             </a>
         </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
         <nav class="nav-links">
-            <a href="#"><h1>Home</h1></a>
-            <a href="#"><h1>About Us</h1></a>
-            <a href="#"><h1>Programs</h1></a>
-            <a href="#"><h1>Pages</h1></a>
-            <a href="#"><h1>Contact</h1></a>
-            <a href="#"><h1>Gallery</h1></a>
-            <a href="#"><h1>Departments</h1></a>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Programs</a>
+            <a href="#">Pages</a>
+            <a href="#">Contact</a>
+            <a href="#">Gallery</a>
+            <a href="#">Departments</a>
+            <a href="#">Teacher's Training Courses</a>
         </nav>
         <div class="apply-btn">
-            <a href="/admission"><button class="btn btn-primary">Book a Visit </button></a>
+            <a href="/admission"><button class="btn btn-primary">Book a Visit</button></a>
         </div>
     </div>
 </div>
-
-<div class="curve">
-    <img class="curvee" src="/images/curve.png" alt="curve">
-</div>
-
-<style>
-    /* Base Styles */
-    .navbar {
-        background-color: #ffffff;
-        border-bottom: 1px solid #e5e5e5;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-        padding: 10px 20px;
-        position: relative;
-        width: screen;
-    }
-
-    .navbar-inner {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logoimg {
-        width: 100px;
-        height: 100px;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        
-    }
-
-    .nav-links h1 {
-        color: black;
-        font-size: 18px;
-        margin: 0;
-        transition: color 0.3s;
-    }
-
-    .nav-links h1:hover {
-        color: #b300ff;
-        background-color: #e4e4e4;
-        height: 30px;
-        align-items: center;
-        text-align: center;
-        border-radius: 3px;
-
-
-   
-       
-    }
-    .nav-links a h1{
-        font-size: 25px;
-        
-        
-    }
-
-
-
-
-    .apply-btn .btn {
-        background-color: #FFAA00;
-        color: black;
-        font-size: 16px;
-        cursor: pointer;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 50px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    .apply-btn .btn:hover {
-        background-color: #B50BFE;
-        color: white;
-    }
-
-    /* Responsive Navbar */
-    @media screen and (max-width: 1024px) {
-        .navbar-inner {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .nav-links {
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .apply-btn {
-            margin-top: 10px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        .navbar-inner {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .nav-links {
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .apply-btn {
-            margin-top: 10px;
-        }
-
-        .logoimg {
-            width: 60px;
-            height: 60px;
-        }
-    }
-</style>

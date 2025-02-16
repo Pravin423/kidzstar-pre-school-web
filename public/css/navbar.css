@@ -1,0 +1,110 @@
+
+    /* Base Styles */
+    .navbar {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e5e5e5;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px 20px;
+        width: screen;
+        position: relative;
+    }
+
+    .navbar-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .logoimg {
+        width: 100px;
+        height: auto;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        transition: 0.3s;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+        color: #b300ff;
+        background-color: #e4e4e4;
+    }
+
+    .apply-btn .btn {
+        background-color: #FFAA00;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .apply-btn .btn:hover {
+        background-color: #B50BFE;
+        color: white;
+    }
+
+    /* Mobile Navigation */
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .navbar-inner {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .nav-links {
+            flex-direction: column;
+            display: none;
+            gap: 10px;
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        #menu-toggle:checked + .menu-icon + .nav-links {
+            display: flex;
+        }
+
+        .menu-icon {
+            display: block;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+
+        .apply-btn {
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .logoimg {
+            width: 80px;
+        }
+    }
+
