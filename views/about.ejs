@@ -1,2 +1,342 @@
-<h1>About Our Preschool</h1>
-<p>We focus on child development through fun activities.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script defer>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elementsToAnimate = document.querySelectorAll(".slide-in-left, .slide-in-right, .zoom-fade");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            elementsToAnimate.forEach((element) => observer.observe(element));
+        });
+    </script>
+
+    <style>
+        /* Bouncing up and down */
+        @keyframes bounceUpDown {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Swaying side to side */
+        @keyframes swaySide {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(5deg);
+            }
+        }
+
+        /* Floating animation */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Animation Classes */
+        .animate-bounce-up-down {
+            animation: bounceUpDown 2s infinite ease-in-out;
+        }
+
+        .animate-sway {
+            animation: swaySide 3s infinite ease-in-out;
+        }
+
+        .animate-float {
+            animation: float 3s infinite ease-in-out;
+        }
+
+        /* Slide-in animations */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        /* Zoom-in and fade-in effect */
+        .zoom-fade {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            transform: translateX(0) !important;
+            transform: scale(1) !important;
+        }
+
+        @keyframes jiggle {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(3deg); }
+        50% { transform: rotate(-3deg); }
+        75% { transform: rotate(3deg); }
+    }
+
+    /* Automatically jiggle every 3 seconds */
+    .jiggle-animation {
+        animation: jiggle 0.4s ease-in-out infinite;
+        animation-delay: 3s;
+    }
+
+    /* Jiggle continuously when hovered */
+    .jiggle-animation:hover {
+        animation: jiggle 0.4s ease-in-out infinite;
+    }
+
+    @keyframes underline {
+        0% { background-size: 0% 3px; }
+        50% { background-size: 100% 3px; }
+        100% { background-size: 0% 3px; }
+    }
+
+    .underline-animation {
+        display: inline-block;
+        position: relative;
+        background-image: linear-gradient(to right, #FC7734, #FC7734);
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        background-position: left bottom;
+        padding-bottom: 5px;
+        animation: underline 3s infinite ease-in-out;
+    }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <header>
+        <%- include('partials/navbar') %>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="w-full min-h-screen flex items-center justify-center bg-cover bg-center py-32"
+        style="background-image: url('/images/aboutbacknew.png');">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-16">
+            <!-- Left: Stacked Animated Images -->
+            <div class="flex flex-col items-center space-y-8">
+                <img class="w-20 md:w-24 animate-bounce-up-down" src="images/honey.png" alt="Honey">
+                <img class="w-24 md:w-28 animate-sway" src="images/child.png" alt="Child">
+            </div>
+
+            <!-- Center: Heading with Floating Owl -->
+            <h1 class="text-4xl md:text-5xl font-bold text-orange-500 flex items-center">
+                About Us
+                <img src="images/owl.png" class="w-24 h-auto ml-3 animate-float" alt="Owl">
+            </h1>
+
+            <!-- Right: Kids Image with Smooth Floating -->
+            <div class="relative flex justify-center items-start">
+                <img class="w-20 md:w-24 animate-bounce-up-down" src="images/honey.png" alt="Honey">
+                <img class="w-[300px] md:w-[400px] pb-[100px] md:pb-[150px] ml-[50px] md:ml-[100px] animate-float"
+                    src="images/newchild.png" alt="Kids">
+            </div>
+        </div>
+    </section>
+
+    <br><br>
+
+    <!-- Kidzstar Section with Scroll Animations -->
+    <section id="kidzstar-section" class="min-h-screen py-32">
+        <h1 class="text-4xl mx-auto ml-[50px] mr-[50px] md:text-5xl font-bold text-orange-500 flex items-center">
+            Welcome to Kidzstar <br> Preschool!
+            <img src="images/owl.png" class="w-24 h-auto ml-3 animate-float" alt="Owl">
+        </h1>
+        <div
+            class="container flex flex-col md:flex-row justify-between mx-auto px-6 md:px-16 py-16 space-y-10 md:space-y-0">
+            <div class="img mt-[20px] ml-[80px]">
+                <img src="images/logoimage.png" alt="kidslogoimage"
+                    class="transition-all duration-300 hover: hover:scale-105">
+            </div>
+
+            <div id="text" class="w-[800px] slide-in-right">
+                <p class="text-xl font-semibold text-[#B58857] leading-relaxed">
+                    <span
+                        class="block group hover:underline hover:decoration-wavy hover:decoration-[#B58857] transition-all duration-300">
+                        At Kidzstar Pre-Primary School, we are dedicated to providing a nurturing and stimulating
+                        learning
+                        environment where young children can explore, grow, and develop essential skills for a bright
+                        future. Our holistic approach focuses on cognitive, emotional, social, and physical development,
+                        ensuring a well-rounded foundation for lifelong learning.
+                    </span>
+                    <br>
+
+                    <span
+                        class="block group hover:underline hover:decoration-wavy hover:decoration-[#B58857] transition-all duration-300">
+                        We believe in fostering creativity, encouraging imaginative play, and promoting problem-solving
+                        through hands-on activities that inspire curiosity. Our individualized learning approach
+                        respects
+                        each child's unique pace, offering personalized attention to support their growth. Through
+                        engaging
+                        group activities, we emphasize teamwork, communication, helping children build strong
+                        social skills.
+                    </span>
+                    <br>
+
+                    <span
+                        class="block group hover:underline hover:decoration-wavy hover:decoration-[#B58857] transition-all duration-300">
+                        At Kidzstar, we introduce foundational literacy and numeracy in a fun, interactive manner,
+                        preparing
+                        children for future academic success. We also prioritize health and well-being, encouraging
+                        healthy
+                        habits and emotional resilience.
+                    </span>
+                    <br>
+
+                    <span
+                        class="block group hover:underline hover:decoration-wavy hover:decoration-[#B58857] transition-all duration-300">
+                        We value strong parental involvement and believe in working closely with families to support
+                        each
+                        child's educational journey. Our mission is to create a joyful, inclusive, and innovative
+                        learning
+                        space where children feel safe, confident, and excited to learn every day.
+                    </span>
+                </p>
+
+
+            </div>
+        </div>
+    </section>
+    <section class="w-100 min-h-screen flex items-center justify-center bg-cover bg-center py-32"
+        style="background-image: url('/images/afteraboutback.png');">
+        <div class="container flex w-screen justify-between mx-auto ml-[100px] mr-[100px]">
+            <div class="part1 justify-center">
+                <h1 class="text-6xl text-[#FC7734] font-bold underline-animation">Parental Involvement</h1>
+                <br>
+                <br>
+                <br>
+                <p class="w-[600px] text-xl font-semibold text-[#B58857] ml-[40px]  ">We believe that parents play a
+                    crucial role in their child’s development. At Kidzstar, we maintain an
+                    open line of communication with parents through regular updates, parent-teacher meetings, and
+                    interactive workshops. This partnership helps reinforce learning at home and ensures that every
+                    child receives the best possible support.</p>
+            </div>
+
+            <div class="part2">
+                <img src="images/parentsinvolvmen.png" alt="" class="jiggle-animation">
+            </div>
+        </div>
+
+
+
+
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <section class="w-screen min-h-screen flex items-center justify-center bg-cover bg-center py-32" 
+    style="background-image: url('/images/newbackground.png');">
+    <div class="text-center">
+        <h2 class="text-5xl font-bold text-pink-600 mb-12">Best Facilities For Kid</h2>
+        <div class="grid grid-cols-2 gap-16 max-w-6xl mx-auto items-center">
+            <div class="flex items-center space-x-6 fade-in" data-order="1">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-red-500 text-white text-2xl font-bold">1</div>
+                <p class="text-xl text-brown-700 font-semibold">Safe and secure outdoor play area</p>
+            </div>
+            <div class="flex items-center space-x-6 fade-in" data-order="2">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-yellow-500 text-white text-2xl font-bold">2</div>
+                <p class="text-xl text-brown-700 font-semibold">Colorful and stimulating classrooms</p>
+            </div>
+            <div class="flex items-center space-x-6 fade-in" data-order="3">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-green-500 text-white text-2xl font-bold">3</div>
+                <p class="text-xl text-brown-700 font-semibold">Indoor play spaces for physical activities</p>
+            </div>
+            <div class="flex items-center space-x-6 fade-in" data-order="4">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-pink-300 text-white text-2xl font-bold">4</div>
+                <p class="text-xl text-brown-700 font-semibold">Interactive learning tools and educational toys</p>
+            </div>
+            <div class="flex items-center space-x-6 fade-in" data-order="5">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-purple-400 text-white text-2xl font-bold">5</div>
+                <p class="text-xl text-brown-700 font-semibold">Art and creativity corner with diverse materials</p>
+            </div>
+            <div class="flex items-center space-x-6 fade-in" data-order="6">
+                <div class="w-14 h-14 flex items-center justify-center rounded-full bg-teal-400 text-white text-2xl font-bold">6</div>
+                <p class="text-xl text-brown-700 font-semibold">Multimedia and technology integration for learning</p>
+            </div>
+        </div>
+        
+    </div>
+</section>
+<header>
+    <%- include('partials/footer') %>
+</header>
+
+<style>
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1; 
+    transform: translateY(0);
+}
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const elements = [...document.querySelectorAll(".fade-in")].sort((a, b) => {
+            return a.getAttribute("data-order") - b.getAttribute("data-order");
+        });
+
+        function checkScroll() {
+            elements.forEach((el, index) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 50) {
+                    setTimeout(() => {
+                        el.classList.add("visible");
+                    }, index * 300);
+                }
+            });
+        }
+
+        window.addEventListener("scroll", checkScroll);
+        checkScroll();
+    });
+</script>
+
+
+
+</body>
+
+</html>

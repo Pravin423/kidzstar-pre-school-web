@@ -1,16 +1,17 @@
-<div class="container">
-  <div class="footerimg">
-    <div class="below">
-      <img class="imgfooter" src="/images/logo.png" alt="" />
-      <h1>KIDZSTAR</h1>
-      <h5>
-        It is our goal to provide age appropriate opportunity for every child
+<div class="container mx-auto px-4">
+  <div class="footerimg border border-black p-5 w-full h-[572px] bg-cover bg-center flex bg-[url('/images/footer.png')]">
+    <div class="below flex flex-col mt-24 ml-10">
+      <img class="imgfooter w-48 h-48" src="/images/logo.png" alt="" />
+      <h1 class="text-gray-700 text-4xl font-bold">KIDZSTAR</h1>
+      <h5 class="mt-1 text-left w-96 text-gray-700 text-xl font-light">
+        It is our goal to provide age-appropriate opportunities for every child
         enrolled in Kidzstar enrichment classes.
       </h5>
-      <p>© 2025 Kidzstar. All Rights Reserved.</p>
+      <p class="text-gray-700">© 2025 Kidzstar. All Rights Reserved.</p>
     </div>
-    <div class="footer2">
-      <div class="details1">
+
+    <div class="footer2 flex flex-col mt-24 ml-10">
+      <div class="details1 flex flex-col mt-5 text-gray-700">
         <h3>About Us</h3>
         <h3>Course</h3>
         <h3>Contact Us</h3>
@@ -19,25 +20,26 @@
       </div>
     </div>
 
-    <div class="footer3">
-      <div class="details2">
+    <div class="footer3 flex flex-col mt-24 ml-10">
+      <div class="details2 flex flex-col mt-5 text-gray-700">
         <h3>Recently Viewed</h3>
-        <h3>New programs</h3>
+        <h3>New Programs</h3>
         <h3>Curriculums</h3>
         <h3>Career</h3>
         <h3>School Staffs</h3>
       </div>
     </div>
 
-    <div class="footer4">
-      <div class="details3">
-        <h2>Thane-Sawarkar Nagar <br />& Indira Nagar, Koparkhairane</h2>
-        <p>9321002881 / 9323331360 / 7304344802</p>
-      </div>
+    <div class="footer4 flex flex-col items-center mt-24 ml-36 text-gray-700">
+      <h2 class="text-xl font-semibold text-center">
+        Thane-Sawarkar Nagar <br />& Indira Nagar, Koparkhairane
+      </h2>
+      <p>9321002881 / 9323331360 / 7304344802</p>
     </div>
 
-    <div class="map-container">
+    <div class="map-container flex items-center ml-10">
       <iframe
+        class="w-[300px] h-[200px] rounded-lg"
         src="https://www.google.com/maps/embed/v1/place?q=Thane-Sawarkar+Nagar,+Indira+Nagar,+Koparkhairane&key=YOUR_GOOGLE_MAPS_API_KEY"
       >
       </iframe>
@@ -45,74 +47,3 @@
   </div>
   <footer></footer>
 </div>
-<style>
-  .footerimg {
-    border: 1px solid black;
-    padding: 20px;
-    width: screen;
-    height: 572px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-
-    background-image: url("/images/footer.png");
-  }
-  .imgfooter {
-    display: flex;
-    margin-top: 00px;
-    margin-left: 0px;
-    width: 200px;
-    height: 200px;
-  }
-  .below {
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    margin-left: 40px;
-  }
-  .below h1 {
-    color: #5a5555;
-    font-size: 40px;
-    font-weight: 700;
-  }
-  .below h5 {
-    margin-top: 2px;
-    margin-left: 0px;
-    text-align: start;
-    width: 400px;
-    color: #5a5555;
-    font-size: 20px;
-    font-weight: 300;
-  }
-  .footer2,
-  .footer3 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px;
-    margin-top: 100px;
-    margin-left: 40px;
-  }
-  .details1,
-  .details2 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 0px;
-    color: #5a5555;
-  }
-  .footer4 {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #5a5555;
-    margin: 0px;
-    margin-top: 100px;
-    margin-left: 140px;
-  }
-  .map {
-    display: flex;
-    width: 100%;
-    height: 500px;
-  }
-</style>
