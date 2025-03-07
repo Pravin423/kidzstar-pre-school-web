@@ -13,6 +13,28 @@ router.get("/about", (req, res) => {
     res.render("about");
 });
 
+
+router.get("/programs", (req, res) => {
+    res.render("programs");
+});
+router.get("/pages", (req, res) => {
+    res.render("pages");
+});
+router.get("/contact", (req, res) => {
+    res.render("contact");
+});
+router.get("/gallery", (req, res) => {
+    res.render("gallery");
+});
+
+router.get("/departments", (req, res) => {
+    res.render("departments");
+});
+router.get("/teachers", (req, res) => {
+    res.render("teachers");
+});
+
+
 // Admission Form
 router.get("/admission", (req, res) => {
     res.render("admission");
