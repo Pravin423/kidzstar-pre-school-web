@@ -1,5 +1,6 @@
 import express from "express";
 import Admission from "../models/Admission.mjs";
+import Enquiry from "../models/Enquiry.mjs";
 
 const router = express.Router();
 
@@ -33,6 +34,23 @@ router.get("/departments", (req, res) => {
 router.get("/teachers", (req, res) => {
     res.render("teachers");
 });
+
+
+router.get("/enquiry", (req, res) => {
+    res.render("enquiry");
+});
+router.post("/enquiry", async (req, res) => {
+
+    try {
+        const { firstname, lastname, email, currentLocation, phoneNumber, course } = req.body;
+        await Enquiry.create({ firstname, lastname, email, currentLocation, phoneNumber, course  });
+        res.redirect("/success");
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Error submitting application");
+    }
+});
+
 
 
 // Admission Form

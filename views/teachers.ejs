@@ -1,13 +1,280 @@
+<style>
+    
+    @keyframes underline {
+        0% {
+            background-size: 0% 3px;
+        }
 
+        50% {
+            background-size: 100% 3px;
+        }
+
+        100% {
+            background-size: 0% 3px;
+        }
+    }
+
+    .underline-animation {
+        display: inline-block;
+        position: absolute;
+        background-image: linear-gradient(to right, #FC7734, #FC7734);
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        background-position: left bottom;
+        padding-bottom: 5px;
+        animation: underline 3s infinite ease-in-out;
+    }
+    button {
+  position: relative;
+  margin: 0;
+  padding: 0.8em 1em;
+  outline: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 300;
+  font-size: 18px;
+  font-family: inherit;
+  z-index: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button:hover {
+  animation: sh0 0.5s ease-in-out both;
+}
+
+@keyframes sh0 {
+  0% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: rotate(7deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-7deg) translate3d(0, 0, 0);
+  }
+
+  75% {
+    transform: rotate(1deg) translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+button:hover span {
+  animation: storm 0.7s ease-in-out both;
+  animation-delay: 0.06s;
+}
+
+button::before,
+button::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 161px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0;
+  transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1);
+  z-index: -1;
+  transform: translate(100%, -25%) translate3d(0, 0, 0);
+}
+
+button:hover::before,
+button:hover::after {
+  opacity: 0.15;
+  transition: transform 0.2s cubic-bezier(0.02, 0.01, 0.47, 1), opacity 0.2s cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+button:hover::before {
+  transform: translate3d(50%, 0, 0) scale(0.9);
+}
+
+button:hover::after {
+  transform: translate(50%, 0) scale(1.1);
+}
+
+
+</style>
 <header>
     <%- include('partials/navbar') %>
 </header>
-<section class="flex justify-center items-center ml-[270px] ">
-    <div class="container">
-        <div class="row">
-            <br>    
-            <%- include('partials/update') %>
+<section class="w-full h-[544px] flex items-center justify-center bg-cover bg-center py-32"
+    style="background-image: url('/images/teacherbackgound.png');">
+    <h1 class="text-white text-6xl font-bold relative underline-animation">
+        "Teacher's Training Courses"
+    </h1>
+</section>
+<section>
+    <div class="container flex justify-evenly items-center">
+        <div class="form mt-[100px] ml-[10px] bg-black p-[50px] rounded-[10px] w-[511px] h-[1130px]">
+            <a href="/enquiry"><button class="bg-white">submit</button></a>
+        </div>
+        <div class="text mt-[60px]">
+            <h1 class="text-black text-3xl font-bold relative underline-animation">
+                ECCED Training Course at Kidzstar Pre Primary School
+            </h1>
+            <br>
+            <h1 class="text-black ml-[250px] w-[305px] font-semibold">Empower Yourself to Shape Young Minds</h1>
+            <br>
+            <h1 class="text-black w-[202px] font-extrabold italic">Course Overview</h1>
+            <br>
+            <h1 class="text-black text-[15px] w-[618px]">The Early Childhood Care and Education (ECCED) Training Course
+                is designed to equip aspiring and current educators with the skills, knowledge, and tools to excel in
+                early childhood education. From child development to classroom management, this comprehensive program
+                prepares you to create nurturing, engaging, and inclusive learning environments for young children.
+                Whether you're starting your teaching journey or enhancing your expertise, this course is your stepping
+                stone to success in preschool education.</h1>
+            <br>
+            <h1 class="text-black w-[202px] font-extrabold italic">Course Duration</h1>
+            <li class="font-medium text-[15px]"> 1 Year</li>
+            <li class="font-medium text-[15px]"> Flexible Options: In-person and online modules available</li>
+            <br>
+            <h1 class="text-black w-[202px] font-extrabold italic">Eligibility Criteria</h1>
+            <li class="font-medium text-[15px]">A passion for working with young children</li>
+            <li class="font-medium text-[15px]"> Minimum qualification: 10+2 (Higher Secondary)</li>
+            <li class="font-medium text-[15px]"> No prior teaching experience required – beginner-friendly!</li>
+            <br>
+            <h1 class="text-black text-[20px] w-[202px] font-bold italic">What You’ll Learn</h1>
+            <h1 class="text-black w-[202px] font-bold italic">Course Modules</h1>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">1. Introduction to Early Childhood Education</h1>
+            <li class="font-medium text-[15px]">Importance of early education</li>
+            <li class="font-medium text-[15px]"> Key theories of child development (Piaget, Vygotsky, etc)</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">2. Child Development Stages</h1>
+            <li class="font-medium text-[15px]">Physical, emotional, cognitive, and social growth</li>
+            <li class="font-medium text-[15px]">Age-appropriate teaching strategies</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">3. Classroom Management & Environment</h1>
+            <li class="font-medium text-[15px]">Building safe, stimulating, and inclusive spaces</li>
+            <li class="font-medium text-[15px]">Positive behavior techniques and conflict resolution</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">4. Play-Based Learning</h1>
+            <li class="font-medium text-[15px]">Harnessing play for education</li>
+            <li class="font-medium text-[15px]">Designing creative, interactive activities</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">5. Language & Literacy Development</h1>
+            <li class="font-medium text-[15px]">Fun ways to teach early literacy</li>
+            <li class="font-medium text-[15px]">Storytelling, songs, and reading exercises</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">6. Numeracy in Early Childhood</h1>
+            <li class="font-medium text-[15px]">Introducing math through hands-on activities</li>
+            <li class="font-medium text-[15px]">Everyday approaches to numbers</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">7. Health, Safety & Nutrition</h1>
+            <li class="font-medium text-[15px]">First-aid essentials</li>
+            <li class="font-medium text-[15px]">Promoting hygiene and healthy habits</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">8. Inclusive Education & Special Needs</h1>
+            <li class="font-medium text-[15px]">Supporting diverse learners</li>
+            <li class="font-medium text-[15px]">Adapting strategies for children with disabilities</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">9. Building Relationships with Parents</h1>
+            <li class="font-medium text-[15px]">Effective communication and collaboration</li>
+            <li class="font-medium text-[15px]">Engaging parents in the learning journey</li>
+            <br>
+            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">10. Professionalism & Career Development</h1>
+            <li class="font-medium text-[15px]">Ethical responsibilities of educators</li>
+            <li class="font-medium text-[15px]">Pathways for growth and continuing education</li>
+
+
 
         </div>
     </div>
+</section>
+<br>
+<br>
+<br>
+
+<section class="w-full h-[544px] flex items-center justify-between bg-cover bg-center py-32"
+    style="background-image: url('/images/teacherbackground2.png');">
+    <div class="part1 ml-[100px]">
+        <h1 class="font-bold text-[64px] text-black">Training Methods</h1>
+        <li class="font-medium text-[20px]">Interactive Workshops</li>
+        <li class="font-medium text-[20px]">Classroom Observations & Practical Training</li>
+        <li class="font-medium text-[20px]">Online Learning Modules</li>
+        <li class="font-medium text-[20px]">Group Discussions & Peer Feedback</li>
+        <li class="font-medium text-[20px]"> Field Visits to Local Preschools (Optional)</li>
+    </div>
+    <div class="relative w-[600px] h-[400px] mx-auto">
+        <div class="relative group">
+            <img src="/images/teacher1.png" class="absolute top-0 left-0 w-[405px] h-[304px] rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.5)]">
+        </div>
+        <div class="relative group">
+            <img src="/images/teacher2.png" class="absolute top-[160px] bottom-0 left-[200px] w-[470px] h-[300px] rounded-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-[0px_0px_20px_rgba(255,255,255,0.5)]">
+        </div>
+    </div>
+    
+
+</section>
+<br>
+<br>
+<br>
+<br>
+<section class="flex items-center justify-center ">
+    <div class="container mx-[20px] border-[1px] border-black bg-[#30E1CB] w-[1440px] h-[292px] rounded-[54px] flex flex-col items-center justify-center">
+        <h1 class="text-center mt-[20px] text-[64px] font-bold text-black">Certification</h1>
+        <h1 class="text-center mt-[10px] text-[24px] w-[1307px] font-bold text-[#4E4E4E]">
+            Upon completion, you’ll earn a Certificate in Early Childhood Education and Development (ECCED), 
+            recognized by Kidzstar Pre Primary School and esteemed educational institutions.
+        </h1>
+    </div>
+    
+</section>
+<br>
+<br>
+<br>
+<br>
+<section class="w-auto h-[450px] flex items-center justify-between bg-cover bg-center py-32"
+    style="background-image: url('/images/teacherbackground3.png');">
+    <div class="container text-white">
+        <h1 class="font-bold text-[64px] w-[583px] ml-[100px]">Why Choose Our ECCED Training?</h1>
+    </div>
+    <div class="container font-medium text-[24px] text-white flex flex-col items-start justify-center">
+        <li>Learn from experienced educators and industry experts</li>
+        <li>Flexible learning: In-person or online – you choose!</li>
+        <li>Hands-on training with real-world application</li>
+        <li>Join a supportive learning community</li>
+        <li> Job Placement Assistance after course completion</li>
+    </div>
+    
+</section>
+
+<br><br><br><br>
+<section class="flex items-center justify-center ">
+    <div class="container mx-[20px] border-[1px] border-black bg-[#FFD071] w-[1440px] h-[292px] rounded-[54px] flex flex-col items-center justify-center">
+        <h1 class="text-center mt-[20px] text-[48px] font-bold text-black">Ready to Make a Difference?</h1>
+        <h1 class="text-center mt-[10px] text-[24px] w-[756px] font-bold text-[#4E4E4E]">
+            Enroll today and start your journey toward becoming an inspiring early childhood educator!
+        </h1>
+        <div class="container flex items-center justify-center gap-x-[20px]">
+            <a href=""><button class="bg-[#333333] p-2 w-[200px] h-[50px] mt-[20px]">
+                <span class="text-white">CONTACT US</span>
+            </button></a>
+            
+        <a href=""> <button class="bg-[#333333] p-2 w-[200px] h-[50px] mt-[20px]">
+            <span class="text-white">GET IN TOUCH</span>
+        </button></a>
+           
+        </div>
+        
+       
+    </div>
+    
+    
 </section>
