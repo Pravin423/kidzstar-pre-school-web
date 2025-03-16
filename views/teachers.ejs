@@ -1,4 +1,12 @@
-<style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEACHER TRAINING</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+        <style>
     
     @keyframes underline {
         0% {
@@ -108,10 +116,17 @@ button:hover::after {
   transform: translate(50%, 0) scale(1.1);
 }
 
-
+body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1 {
+            font-family: 'Merriweather', serif;
+        }
 
 </style>
-<header>
+       
+</head>
+<body>'<header>
     <%- include('partials/navbar') %>
 </header>
 <section class="w-full h-[544px] flex items-center justify-center bg-cover bg-center py-32"
@@ -128,75 +143,97 @@ button:hover::after {
             <a href="/enquiry"><button class="bg-white w-[100px] h-[50px]">submit</button></a>
         </div>
         <div class="text mt-[60px]">
-            <h1 class="text-black text-3xl font-bold relative underline-animation">
+            <h1 class="text-black text-3xl font-bold heading relative underline-animation">
                 ECCED Training Course at Kidzstar Pre Primary School
             </h1>
             <br>
-            <h1 class="text-black ml-[250px] w-[305px] font-semibold">Empower Yourself to Shape Young Minds</h1>
+            <h1 class="text-black ml-[250px] w-[305px] font-semibold text-lg">Empower Yourself to Shape Young Minds</h1>
             <br>
-            <h1 class="text-black w-[202px] font-extrabold italic">Course Overview</h1>
+            <h1 class="text-black w-[202px] font-extrabold italic text-xl heading">Course Overview</h1>
             <br>
-            <h1 class="text-black text-[15px] w-[618px]">The Early Childhood Care and Education (ECCED) Training Course
-                is designed to equip aspiring and current educators with the skills, knowledge, and tools to excel in
-                early childhood education. From child development to classroom management, this comprehensive program
-                prepares you to create nurturing, engaging, and inclusive learning environments for young children.
-                Whether you're starting your teaching journey or enhancing your expertise, this course is your stepping
-                stone to success in preschool education.</h1>
+            <p class="text-black text-[15px] w-[618px] leading-relaxed">
+                The Early Childhood Care and Education (ECCED) Training Course is designed to equip aspiring and current educators 
+                with the skills, knowledge, and tools to excel in early childhood education. From child development to classroom management, 
+                this comprehensive program prepares you to create nurturing, engaging, and inclusive learning environments for young children. 
+                Whether you're starting your teaching journey or enhancing your expertise, this course is your stepping stone to success in preschool education.
+            </p>
             <br>
-            <h1 class="text-black w-[202px] font-extrabold italic">Course Duration</h1>
-            <li class="font-medium text-[15px]"> 1 Year</li>
-            <li class="font-medium text-[15px]"> Flexible Options: In-person and online modules available</li>
+            <h1 class="text-black w-[202px] font-extrabold italic text-xl heading">Course Duration</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">1 Year</li>
+                <li class="font-medium text-[15px]">Flexible Options: In-person and online modules available</li>
+            </ul>
             <br>
-            <h1 class="text-black w-[202px] font-extrabold italic">Eligibility Criteria</h1>
-            <li class="font-medium text-[15px]">A passion for working with young children</li>
-            <li class="font-medium text-[15px]"> Minimum qualification: 10+2 (Higher Secondary)</li>
-            <li class="font-medium text-[15px]"> No prior teaching experience required – beginner-friendly!</li>
+            <h1 class="text-black w-[202px] font-extrabold italic text-xl heading">Eligibility Criteria</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">A passion for working with young children</li>
+                <li class="font-medium text-[15px]">Minimum qualification: 10+2 (Higher Secondary)</li>
+                <li class="font-medium text-[15px]">No prior teaching experience required – beginner-friendly!</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[20px] w-[202px] font-bold italic">What You’ll Learn</h1>
-            <h1 class="text-black w-[202px] font-bold italic">Course Modules</h1>
+            <h1 class="text-black text-[20px] w-[202px] font-bold italic heading">What You’ll Learn</h1>
+            <h1 class="text-black w-[202px] font-bold italic text-lg heading">Course Modules</h1>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">1. Introduction to Early Childhood Education</h1>
-            <li class="font-medium text-[15px]">Importance of early education</li>
-            <li class="font-medium text-[15px]"> Key theories of child development (Piaget, Vygotsky, etc)</li>
+        
+            <h1 class="text-black text-[18px] font-bold heading">1. Introduction to Early Childhood Education</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Importance of early education</li>
+                <li class="font-medium text-[15px]">Key theories of child development (Piaget, Vygotsky, etc.)</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">2. Child Development Stages</h1>
-            <li class="font-medium text-[15px]">Physical, emotional, cognitive, and social growth</li>
-            <li class="font-medium text-[15px]">Age-appropriate teaching strategies</li>
+            <h1 class="text-black text-[18px] font-bold heading">2. Child Development Stages</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Physical, emotional, cognitive, and social growth</li>
+                <li class="font-medium text-[15px]">Age-appropriate teaching strategies</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">3. Classroom Management & Environment</h1>
-            <li class="font-medium text-[15px]">Building safe, stimulating, and inclusive spaces</li>
-            <li class="font-medium text-[15px]">Positive behavior techniques and conflict resolution</li>
+            <h1 class="text-black text-[18px] font-bold heading">3. Classroom Management & Environment</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Building safe, stimulating, and inclusive spaces</li>
+                <li class="font-medium text-[15px]">Positive behavior techniques and conflict resolution</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">4. Play-Based Learning</h1>
-            <li class="font-medium text-[15px]">Harnessing play for education</li>
-            <li class="font-medium text-[15px]">Designing creative, interactive activities</li>
+            <h1 class="text-black text-[18px] font-bold heading">4. Play-Based Learning</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Harnessing play for education</li>
+                <li class="font-medium text-[15px]">Designing creative, interactive activities</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">5. Language & Literacy Development</h1>
-            <li class="font-medium text-[15px]">Fun ways to teach early literacy</li>
-            <li class="font-medium text-[15px]">Storytelling, songs, and reading exercises</li>
+            <h1 class="text-black text-[18px] font-bold heading">5. Language & Literacy Development</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Fun ways to teach early literacy</li>
+                <li class="font-medium text-[15px]">Storytelling, songs, and reading exercises</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">6. Numeracy in Early Childhood</h1>
-            <li class="font-medium text-[15px]">Introducing math through hands-on activities</li>
-            <li class="font-medium text-[15px]">Everyday approaches to numbers</li>
+            <h1 class="text-black text-[18px] font-bold heading">6. Numeracy in Early Childhood</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Introducing math through hands-on activities</li>
+                <li class="font-medium text-[15px]">Everyday approaches to numbers</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">7. Health, Safety & Nutrition</h1>
-            <li class="font-medium text-[15px]">First-aid essentials</li>
-            <li class="font-medium text-[15px]">Promoting hygiene and healthy habits</li>
+            <h1 class="text-black text-[18px] font-bold heading">7. Health, Safety & Nutrition</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">First-aid essentials</li>
+                <li class="font-medium text-[15px]">Promoting hygiene and healthy habits</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">8. Inclusive Education & Special Needs</h1>
-            <li class="font-medium text-[15px]">Supporting diverse learners</li>
-            <li class="font-medium text-[15px]">Adapting strategies for children with disabilities</li>
+            <h1 class="text-black text-[18px] font-bold heading">8. Inclusive Education & Special Needs</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Supporting diverse learners</li>
+                <li class="font-medium text-[15px]">Adapting strategies for children with disabilities</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">9. Building Relationships with Parents</h1>
-            <li class="font-medium text-[15px]">Effective communication and collaboration</li>
-            <li class="font-medium text-[15px]">Engaging parents in the learning journey</li>
+            <h1 class="text-black text-[18px] font-bold heading">9. Building Relationships with Parents</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Effective communication and collaboration</li>
+                <li class="font-medium text-[15px]">Engaging parents in the learning journey</li>
+            </ul>
             <br>
-            <h1 class="text-black text-[18px]  w-[390px] font-bold   ">10. Professionalism & Career Development</h1>
-            <li class="font-medium text-[15px]">Ethical responsibilities of educators</li>
-            <li class="font-medium text-[15px]">Pathways for growth and continuing education</li>
-
-
-
+            <h1 class="text-black text-[18px] font-bold heading">10. Professionalism & Career Development</h1>
+            <ul class="list-disc pl-5">
+                <li class="font-medium text-[15px]">Ethical responsibilities of educators</li>
+                <li class="font-medium text-[15px]">Pathways for growth and continuing education</li>
+            </ul>
         </div>
     </div>
 </section>
@@ -266,7 +303,7 @@ button:hover::after {
             Enroll today and start your journey toward becoming an inspiring early childhood educator!
         </h1>
         <div class="container flex items-center justify-center gap-x-[20px]">
-            <a href="#"><button class="bg-[#333333] p-2 w-[200px] h-[50px] mt-[20px]">
+            <a href="/contact"><button class="bg-[#333333] p-2 w-[200px] h-[50px] mt-[20px]">
                 <span class="text-white">CONTACT US</span>
             </button></a>
             
@@ -284,4 +321,7 @@ button:hover::after {
 <br><br><br><br>
 <section>
     <header><%- include('partials/footer') %></header>
-</section>
+</section>'
+    
+</body>
+</html>
