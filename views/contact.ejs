@@ -1,13 +1,31 @@
-
-<header>
-    <%- include('partials/navbar') %>
-</header>
-<section class="flex justify-center items-center ml-[270px] ">
-    <div class="container">
-        <div class="row">
-            <br>    
-            <%- include('partials/update') %>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/public/css/homepage.css" />
+    <link rel="stylesheet" href="/public/css/contact.css" />
+</head>
+<body class="bg-gradient-to-r from-green-500 to-teal-600 ">
+    <header>
+        <%- include('partials/navbar') %>
+    </header>
+    <div class="max-w-2xl mx-auto my-10 p-8 bg-white text-gray-900 rounded-xl shadow-xl">
+        <h2 class="text-3xl font-extrabold mb-6 text-center text-teal-700">Contact Information</h2>
+        <p class="text-lg mb-2"><strong>Phone:</strong> 9321002881 / 9323331360 / 7304344802</p>
+        <p class="text-lg mb-2"><strong>Email:</strong> kidzstarpreprimaryschool@gmail.com</p>
+        <p class="text-lg"><strong>Address:</strong> Thane-Sawarkar Nagar & Indira Nagar, Koparkhairane</p>
+    </div>
+    <div class="max-w-4xl mx-auto my-6 p-6 bg-white text-gray-900 rounded-xl shadow-xl">
+        <h3 class="text-2xl font-semibold mb-4 text-center text-teal-700">Find Us on Google Maps</h3>
+        <div class="w-full h-96 rounded-lg shadow-lg overflow-hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1332.0886961548667!2d72.95308237777326!3d19.20761149776563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9734b5b967d%3A0x5392586d568e0581!2sSavarkar%20Nagar%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400606!5e0!3m2!1sen!2sin!4v1742108769485!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-</section>
+    <footer class="bg-gray-900 text-center py-4 mt-10">
+        <%- include('partials/footer') %>
+    </footer>
+</body>
+</html>

@@ -1,18 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
 
+    <form action="/admission" method="POST" class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">Admission Form</h1>
 
-<h1>Admission Form</h1>
-<form action="/admission" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="tel" name="phone" placeholder="Your Phone" required>
-    <input type="text" name="childName" placeholder="Child's Name" required>
-    <input type="number" name="childAge" placeholder="Child's Age" required>
-    <textarea name="message" placeholder="Additional Message"></textarea>   
-    
-    <!-- Booking date and time selection -->
-    <label for="bookslot">Book a Slot:</label>
-    <input type="datetime-local" id="bookslot" name="bookslot" required>
+        <input type="text" name="name" placeholder="Your Name" required 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
+        
+        <input type="email" name="email" placeholder="Your Email" required 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
+        
+        <input type="tel" name="phone" placeholder="Your Phone" required 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
+        
+        <input type="text" name="childName" placeholder="Child's Name" required 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
+        
+        <input type="number" name="childAge" placeholder="Child's Age" required 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
+        
+        <textarea name="message" placeholder="Additional Message" rows="4" 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3"></textarea>
 
-    <button type="submit">Apply</button>
-</form>
+        <label for="bookslot" class="block text-gray-700 font-semibold mb-2">Book a Slot:</label>
+        <input type="datetime-local" id="bookslot" name="bookslot" required 
+            class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
 
+        <button type="submit" 
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold p-3 rounded-md transition duration-300">
+            Apply
+        </button>
+    </form>
+
+</body>
+</html>
