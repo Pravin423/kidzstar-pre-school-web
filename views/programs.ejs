@@ -1,13 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programs Page</title>
 
-<header>
-    <%- include('partials/navbar') %>
-</header>
-<section class="flex justify-center items-center ml-[270px] ">
-    <div class="container">
-        <div class="row">
-            <br>    
-            <%- include('partials/update') %>
+    <style>
+      @keyframes jiggle {
+        0%,
+        100% {
+          transform: rotate(-3deg);
+        }
+        50% {
+          transform: rotate(3deg);
+        }
+      }
 
+      .jiggle-on-hover:hover {
+        animation: jiggle 0.4s ease-in-out;
+      }
+
+      @keyframes softJiggleOnce {
+        0% {
+          transform: rotate(0deg) scale(1) translateX(0);
+        }
+        25% {
+          transform: rotate(1deg) scale(1.03) translateX(-2px);
+        }
+        50% {
+          transform: rotate(-1deg) scale(1.02) translateX(2px);
+        }
+        75% {
+          transform: rotate(1deg) scale(1.01) translateX(-1px);
+        }
+        100% {
+          transform: rotate(0deg) scale(1) translateX(0);
+        }
+      }
+
+      .jiggle-on-hover:hover {
+        animation: softJiggleOnce 0.6s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header><%- include('partials/navbar') %></header>
+
+    <section
+      class="w-full h-[450px] items-center bg-cover bg-center py-32"
+      style="background-image: url('/images/programbackground1.png')"
+    >
+      <h1 class="text-white mx-9 text-5xl justify-center align font-bold">
+        Welcome to Kidzstar <br />
+        <p class="ml-[100px]">Pre-School</p>
+      </h1>
+      <br />
+      <p class="text-white ml-[190px] font-semibold text-2xl">All Programs</p>
+    </section>
+
+    <section>
+      <div class="container w-full flex justify-evenly mx-auto mt-10">
+        <div class="w-[850px] mx-auto mt-10">
+          <h1
+            class="text-4xl font-bold text-center text-purple-800 leading-tight"
+          >
+            A lifetime of Learning & Adventure<br />
+            Begins here.
+          </h1>
+          <div class="mt-4 bg-white p-2">
+            <video
+              class="w-[600px] h-[350px] rounded-lg bg-gray-50 mx-auto"
+              autoplay
+              muted
+              loop
+              src="images/test.mp4"
+            ></video>
+            <br />
+            <h1
+              class="text-5xl font-bold text-center text-yellow-400 leading-tight"
+            >
+              Step into a world where curiosity is nurtured – enroll today!
+            </h1>
+          </div>
         </div>
-    </div>
-</section>
+
+        <div class="w-1/2 mx-auto p-4">
+          <form
+            action="/admission"
+            method="POST"
+            class="bg-white p-8 border-gray-200 shadow-lg w-full max-w-lg mx-auto"
+          >
+            <h1 class="text-3xl font-bold text-center text-blue-800 mb-6">
+              Enquire Now
+            </h1>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name*"
+              required
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter Email Id*"
+              required
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Enter Mobile No.*"
+              required
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <input
+              type="text"
+              name="childName"
+              placeholder="Child's Name*"
+              required
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <input
+              type="number"
+              name="childAge"
+              placeholder="Child's Age*"
+              required
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <textarea
+              name="message"
+              placeholder="Additional Message"
+              rows="4"
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            ></textarea>
+
+            <label for="bookslot" class="block text-gray-700 font-semibold mb-2"
+              >Book a Slot*</label
+            >
+            <input
+              type="datetime-local"
+              id="bookslot"
+              name="bookslot"
+              required
+              class="w-full p-3 bg-blue-50 border border-gray-200 rounded-md placeholder-gray-700 font-medium mb-4 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+
+            <div class="flex items-start mb-6">
+              <input
+                type="checkbox"
+                id="agreement"
+                required
+                class="mt-1 mr-2"
+              />
+              <label for="agreement" class="text-sm text-gray-600 leading-snug">
+                I agree to receive information regarding my submitted
+                application by signing up on your platform.*
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="w-[100px] bg-yellow-400 hover:bg-green-700 ml-[185px] text-black font-semibold p-3 rounded-md shadow-md transition duration-300"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex mt-10">
+      <div class="playgroup-container w-full flex justify-evenly mx-auto mt-10">
+        <a href="#"
+          ><div class="playgroup-item">
+            <img src="/images/playgroup.png" alt="Playgroup 1" /></div
+        ></a>
+        <a href="#">
+          <div class="playgroup-item">
+            <img src="/images/nursery.png" alt="Playgroup 2" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="playgroup-item">
+            <img src="/images/jrkg.png" alt="Playgroup 3" />
+          </div>
+        </a>
+        <a href="#">
+          <div class="playgroup-item p-2">
+            <img src="/images/srkg.png" alt="Playgroup 4" />
+          </div>
+        </a>
+      </div>
+    </section>
+    <br />
+
+    <section
+      class="w-100 min-h-screen flex items-center justify-center bg-cover bg-center py-32"
+      style="background-image: url('/images/afteraboutback.png')"
+    >
+      <div class="container mx-auto flex items-center justify-between w-full">
+        <div
+          id="quoteBox"
+          class="items-center mx-[40px] rounded-[30px] w-[500px] h-[200px] bg-gray-200 opacity-0 translate-y-8 transition-all duration-1000 ease-in-out"
+        >
+          <h1
+            class="text-3xl mt-[40px] font-bold text-center text-yellow-400 leading-tight"
+          >
+            "It always seems impossible until it's done."!
+          </h1>
+          <p
+            class="text-1xl font-bold text-center text-yellow-900 leading-tight"
+          >
+            -Nelson Mandela
+          </p>
+        </div>
+
+        <!-- Second div -->
+        <div class="container2 w-[700px] mx-auto text-black">
+          <h1 class="text-yellow-400">Why choose us</h1>
+          <h1 class="text-4xl font-bold">We give your child better values</h1>
+          <br />
+
+          <p class="text-xl font-semibold">
+            At Rainbow Pre-School International, We believe that the finest way
+            to develop a child's mind is to take a mix of unstructured and
+            supervised play, in appealing and engaging learning environments and
+            a program that constantly develops their minds across multiple
+            horizons.
+          </p>
+          <br />
+          <div
+            class="jiggle-on-hover"
+            style="
+              width: screen;
+              border: 4px dashed #ff6200;
+              border-radius: 20px;
+              padding: 10px;
+              margin-top: 10px;
+              position: relative;
+            "
+          >
+            <p class="text-2xl font-bold">Certified Teachers</p>
+            <p>
+              Our Educators are completely certified, exceptionally experienced,
+              and fiercely committed to their jobs.
+            </p>
+          </div>
+          <br />
+          <div
+            class="jiggle-on-hover"
+            style="
+              width: screen;
+              border: 4px dashed #03a92a;
+              border-radius: 20px;
+              padding: 10px;
+              margin-top: 10px;
+              position: relative;
+            "
+          >
+            <p class="text-2xl font-bold">Facility</p>
+            <p>
+              Two Teachers per Classroom, CCTV Enabled, Spacious & Air
+              Conditioned and Child Friendly & Smart Classrooms.
+            </p>
+          </div>
+          <br />
+          <div
+            class="jiggle-on-hover"
+            style="
+              width: screen;
+              border: 4px dashed #030588;
+              border-radius: 20px;
+              padding: 10px;
+              margin-top: 10px;
+              position: relative;
+            "
+          >
+            <p class="text-2xl font-bold">Curriculum</p>
+            <p>
+              Learning goes beyond books, events & celebrations with 100%
+              participation and Teaching Resources include audio-visual aids,
+              toys, stories & conversations
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <section>
+      
+    </section>
+
+    <script>
+      // Apply jiggle-on-hover class only to the main top image inside each playgroup item
+      document
+        .querySelectorAll(".playgroup-item > img:first-child")
+        .forEach((img) => {
+          img.classList.add("jiggle-on-hover");
+        });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove("opacity-0", "translate-y-8");
+              entry.target.classList.add("opacity-100", "translate-y-0");
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      const quoteBox = document.getElementById("quoteBox");
+      if (quoteBox) observer.observe(quoteBox);
+    </script>
+  </body>
+</html>
