@@ -6,6 +6,22 @@
     <title>Programs Page</title>
 
     <style>
+      @keyframes underline {
+        0% { background-size: 0% 3px; }
+        50% { background-size: 100% 3px; }
+        100% { background-size: 0% 3px; }
+    }
+
+    .underline-animation {
+        display: inline-block;
+        position: relative;
+        background-image: linear-gradient(to right, #ed0c2e, #ff1d1d);
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        background-position: left bottom;
+        padding-bottom: 5px;
+        animation: underline 3s infinite ease-in-out;
+    }
       @keyframes jiggle {
         0%,
         100% {
@@ -348,7 +364,20 @@
     <section
   class="w-full bg-cover bg-center py-10"
   style="background-image: url('/images/testimg2.png')"
+  
 >
+<div class="container mx-auto flex flex-col items-center justify-center w-full">
+  <h1 class="text-5xl font-bold text-center text-blue-700  font-bold underline-animation leading-tight">
+    Our Programs
+  </h1>
+  <p class="text-xl font-semibold text-center">
+    We offer a variety of programs to cater to the diverse needs of our
+    students.
+  </p>
+</div>
+<br>
+<br>
+
 
   <div class="container mx-auto flex flex-col md:flex-row justify-evenly gap-10 px-4">
     
@@ -377,7 +406,7 @@
         </div>
         <div class="card w-[300px] h-[180px]">
           <div class="first-content">
-            <img src="/images/hor3.png" alt="Image 3" class="w-full h-full object-cover rounded-[30px]" />
+            <img src="/images/hor2.png" alt="Image 3" class="w-full h-full object-cover rounded-[30px]" />
           </div>
           <div class="second-content">
             <img src="/images/flip2.png" alt="Hover 3" class="w-full h-full object-cover rounded-[30px]" />
@@ -473,5 +502,9 @@
       const quoteBox = document.getElementById("quoteBox");
       if (quoteBox) observer.observe(quoteBox);
     </script>
+    <br>
+    <header>
+      <%- include('partials/footer') %>
+  </header>
   </body>
 </html>
