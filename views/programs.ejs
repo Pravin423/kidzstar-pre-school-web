@@ -7,12 +7,18 @@
 
     <style>
       @keyframes underline {
-        0% { background-size: 0% 3px; }
-        50% { background-size: 100% 3px; }
-        100% { background-size: 0% 3px; }
-    }
+        0% {
+          background-size: 0% 3px;
+        }
+        50% {
+          background-size: 100% 3px;
+        }
+        100% {
+          background-size: 0% 3px;
+        }
+      }
 
-    .underline-animation {
+      .underline-animation {
         display: inline-block;
         position: relative;
         background-image: linear-gradient(to right, #ed0c2e, #ff1d1d);
@@ -21,7 +27,7 @@
         background-position: left bottom;
         padding-bottom: 5px;
         animation: underline 3s infinite ease-in-out;
-    }
+      }
       @keyframes jiggle {
         0%,
         100% {
@@ -60,53 +66,53 @@
       }
 
       .card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 30px;
-  transition: all 0.4s;
-  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-  transform: scale(1);
-}
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;
+        transition: all 0.4s;
+        box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+        transform: scale(1);
+      }
 
-.card:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-  background: rgb(95, 143, 255);
-}
+      .card:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+        background: rgb(95, 143, 255);
+      }
 
-.first-content,
-.second-content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: all 0.4s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-}
+      .first-content,
+      .second-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+      }
 
-.first-content {
-  opacity: 1;
-  z-index: 2;
-}
+      .first-content {
+        opacity: 1;
+        z-index: 2;
+      }
 
-.card:hover .first-content {
-  opacity: 0;
-  z-index: 1;
-}
+      .card:hover .first-content {
+        opacity: 0;
+        z-index: 1;
+      }
 
-.second-content {
-  opacity: 0;
-  transform: rotate(90deg) scale(-1);
-  z-index: 1;
-}
+      .second-content {
+        opacity: 0;
+        transform: rotate(90deg) scale(-1);
+        z-index: 1;
+      }
 
-.card:hover .second-content {
-  opacity: 1;
-  transform: rotate(0deg) scale(1);
-  z-index: 2;
-}
+      .card:hover .second-content {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+        z-index: 2;
+      }
     </style>
   </head>
 
@@ -245,27 +251,92 @@
 
     <section class="flex mt-10">
       <div class="playgroup-container w-full flex justify-evenly mx-auto mt-10">
-        <a href="#"
-          ><div class="playgroup-item">
-            <img src="/images/playgroup.png" alt="Playgroup 1" /></div
-        ></a>
-        <a href="#">
+    
+        <!-- Playgroup 1 -->
+        <a href="#" onclick="openModal('modal1')">
+          <div class="playgroup-item">
+            <img src="/images/playgroup.png" alt="Playgroup 1" />
+          </div>
+        </a>
+    
+        <!-- Playgroup 2 -->
+        <a href="#" onclick="openModal('modal2')">
           <div class="playgroup-item">
             <img src="/images/nursery.png" alt="Playgroup 2" />
           </div>
         </a>
-        <a href="#">
+    
+        <!-- Playgroup 3 -->
+        <a href="#" onclick="openModal('modal3')">
           <div class="playgroup-item">
             <img src="/images/jrkg.png" alt="Playgroup 3" />
           </div>
         </a>
-        <a href="#">
+    
+        <!-- Playgroup 4 -->
+        <a href="#" onclick="openModal('modal4')">
           <div class="playgroup-item p-2">
             <img src="/images/srkg.png" alt="Playgroup 4" />
           </div>
         </a>
+    
       </div>
     </section>
+    <br>
+    <!-- Modal Templates -->
+    <!-- Modal 1 -->
+<div id="modal1" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
+    <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <div class="text-center">
+      <img src="/images/playgroup.png" alt="Playgroup" class="w-fit h-24 mx-auto mb-4 rounded-full ">
+      <h2 class="text-2xl font-bold text-blue-600 mb-2">Playgroup</h2>
+      <p class="text-gray-600 mb-4">Welcome to our Playgroup! We nurture your child’s early learning through fun activities, music, and creative expression in a safe and loving environment.</p>
+      <button onclick="closeModal('modal1')" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div id="modal2" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
+    <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <div class="text-center">
+      <img src="/images/nursery.png" alt="Nursery" class="w-fit h-24 mx-auto mb-4 rounded-full ">
+      <h2 class="text-2xl font-bold text-green-600 mb-2">Nursery</h2>
+      <p class="text-gray-600 mb-4">In Nursery, we focus on developing essential skills like language, motor abilities, and social interaction through guided play and storytelling.</p>
+      <button onclick="closeModal('modal2')" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div id="modal3" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
+    <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <div class="text-center">
+      <img src="/images/jrkg.png" alt="Junior KG" class="w-fit h-24 mx-auto mb-4 rounded-full ">
+      <h2 class="text-2xl font-bold text-purple-600 mb-2">Junior KG</h2>
+      <p class="text-gray-600 mb-4">Junior KG introduces early academic learning in an engaging way, with basic literacy, numeracy, and creative projects that spark curiosity.</p>
+      <button onclick="closeModal('modal3')" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div id="modal4" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
+    <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
+    <div class="text-center">
+      <img src="/images/srkg.png" alt="Senior KG" class="w-fit h-24 mx-auto mb-4 rounded-full ">
+      <h2 class="text-2xl font-bold text-orange-600 mb-2">Senior KG</h2>
+      <p class="text-gray-600 mb-4">Senior KG prepares children for primary school with structured activities in math, reading, science, and social skills in a supportive environment.</p>
+      <button onclick="closeModal('modal4')" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
+    </div>
+  </div>
+</div>
+
+    
     <br />
 
     <section
@@ -362,122 +433,152 @@
     </section>
     <br />
     <section
-  class="w-full bg-cover bg-center py-10"
-  style="background-image: url('/images/testimg2.png')"
-  
->
-<div class="container mx-auto flex flex-col items-center justify-center w-full">
-  <h1 class="text-5xl font-bold text-center text-blue-700  font-bold underline-animation leading-tight">
-    Our Little Learners' World !!
-  </h1>
-  <p class="text-xl font-semibold text-center">
-    From hands-on fun to heartwarming traditions — our programs spark joy and growth in every child’s journey.
-  </p>
-</div>
-<br>
-<br>
+      class="w-full bg-cover bg-center py-10"
+      style="background-image: url('/images/testimg2.png')"
+    >
+      <div
+        class="container mx-auto flex flex-col items-center justify-center w-full"
+      >
+        <h1
+          class="text-5xl font-bold text-center text-blue-700 font-bold underline-animation leading-tight"
+        >
+          Our Little Learners' World !!
+        </h1>
+        <p class="text-xl font-semibold text-center">
+          From hands-on fun to heartwarming traditions — our programs spark joy
+          and growth in every child’s journey.
+        </p>
+      </div>
+      <br />
+      <br />
 
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-evenly gap-10 px-4"
+      >
+        <!-- Part 1 -->
+        <div class="flex gap-4 p-4 rounded-lg w-fit">
+          <!-- Left Large Image -->
+          <div class="card w-[300px] h-[370px]">
+            <div class="first-content">
+              <img
+                src="/images/vertical11.png"
+                alt="Image 1"
+                class="w-full h-full object-cover rounded-[30px]"
+              />
+            </div>
+            <div class="second-content">
+              <img
+                src="/images/flip11.png"
+                alt="Hover 1"
+                class="w-full h-full object-cover rounded-[30px]"
+              />
+            </div>
+          </div>
 
-  <div class="container mx-auto flex flex-col md:flex-row justify-evenly gap-10 px-4">
-    
-    
-    <!-- Part 1 -->
-    <div class="flex gap-4 p-4 rounded-lg w-fit">
-      <!-- Left Large Image -->
-      <div class="card w-[300px] h-[370px]">
-        <div class="first-content">
-          <img src="/images/vertical11.png" alt="Image 1" class="w-full h-full object-cover rounded-[30px]" />
+          <!-- Right Two Images -->
+          <div class="flex flex-col gap-4">
+            <div class="card w-[300px] h-[180px]">
+              <div class="first-content">
+                <img
+                  src="/images/hor22.png"
+                  alt="Image 2"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+              <div class="second-content">
+                <img
+                  src="/images/flip22.png"
+                  alt="Hover 2"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+            </div>
+            <div class="card w-[300px] h-[180px]">
+              <div class="first-content">
+                <img
+                  src="/images/hor11.png"
+                  alt="Image 3"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+              <div class="second-content">
+                <img
+                  src="/images/flip33.png"
+                  alt="Hover 3"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="second-content">
-          <img src="/images/flip11.png" alt="Hover 1" class="w-full h-full object-cover rounded-[30px]" />
-          
+
+        <!-- Part 2 -->
+        <div class="flex gap-4 p-4 rounded-lg w-fit md:mt-[200px]">
+          <!-- Left Large Image -->
+          <div class="card w-[300px] h-[370px]">
+            <div class="first-content">
+              <img
+                src="/images/vertical22.png"
+                alt="Image 4"
+                class="w-full h-full object-cover rounded-[30px]"
+              />
+            </div>
+            <div class="second-content">
+              <img
+                src="/images/flip44.png"
+                alt="Hover 4"
+                class="w-full h-full object-cover rounded-[30px]"
+              />
+            </div>
+          </div>
+
+          <!-- Right Two Images -->
+          <div class="flex flex-col gap-4">
+            <div class="card w-[300px] h-[180px]">
+              <div class="first-content">
+                <img
+                  src="/images/hor3updated.png"
+                  alt="Image 5"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+              <div class="second-content">
+                <img
+                  src="/images/flip55.png"
+                  alt="Hover 5"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+            </div>
+            <div class="card w-[300px] h-[180px]">
+              <div class="first-content">
+                <img
+                  src="/images/hor44.png"
+                  alt="Image 6"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+              <div class="second-content">
+                <img
+                  src="/images/flip66.png"
+                  alt="Hover 6"
+                  class="w-full h-full object-cover rounded-[30px]"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Right Two Images -->
-      <div class="flex flex-col gap-4">
-        <div class="card w-[300px] h-[180px]">
-          <div class="first-content">
-            <img src="/images/hor22.png" alt="Image 2" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-          <div class="second-content">
-            <img src="/images/flip22.png" alt="Hover 2" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-        </div>
-        <div class="card w-[300px] h-[180px]">
-          <div class="first-content">
-            <img src="/images/hor11.png" alt="Image 3" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-          <div class="second-content">
-            <img src="/images/flip33.png" alt="Hover 3" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Part 2 -->
-    <div class="flex gap-4 p-4 rounded-lg w-fit md:mt-[200px]">
-      <!-- Left Large Image -->
-      <div class="card w-[300px] h-[370px]">
-        <div class="first-content">
-          <img src="/images/vertical22.png" alt="Image 4" class="w-full h-full object-cover rounded-[30px]" />
-        </div>
-        <div class="second-content">
-          <img src="/images/flip44.png" alt="Hover 4" class="w-full h-full object-cover rounded-[30px]" />
-        </div>
-      </div>
-
-      <!-- Right Two Images -->
-      <div class="flex flex-col gap-4">
-        <div class="card w-[300px] h-[180px]">
-          <div class="first-content">
-            <img src="/images/hor3updated.png" alt="Image 5" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-          <div class="second-content">
-            <img src="/images/flip55.png" alt="Hover 5" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-        </div>
-        <div class="card w-[300px] h-[180px]">
-          <div class="first-content">
-            <img src="/images/hor44.png" alt="Image 6" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-          <div class="second-content">
-            <img src="/images/flip66.png" alt="Hover 6" class="w-full h-full object-cover rounded-[30px]" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
     <script>
+      function openModal(id) {
+        document.getElementById(id).classList.remove("hidden");
+      }
+
+      function closeModal(id) {
+        document.getElementById(id).classList.add("hidden");
+      }
       // Apply jiggle-on-hover class only to the main top image inside each playgroup item
       document
         .querySelectorAll(".playgroup-item > img:first-child")
@@ -502,9 +603,7 @@
       const quoteBox = document.getElementById("quoteBox");
       if (quoteBox) observer.observe(quoteBox);
     </script>
-    <br>
-    <header>
-      <%- include('partials/footer') %>
-  </header>
+    <br />
+    <header><%- include('partials/footer') %></header>
   </body>
 </html>

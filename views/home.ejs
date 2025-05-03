@@ -6,21 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KidzStar</title>
   <link rel="stylesheet" href="/css/home.css" />
-
 </head>
 
 <body>
+  <!-- Announcement Bar -->
   <div class="announcement">
     <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="7">
       Admissions Open!!! Apply Now - Limited Seats Available - Playgroup - Nursery - Jr.Kg - Sr.Kg
     </marquee>
     <a href="/admission"><button class="btnapply">Enquiry Now</button></a>
   </div>
-  </div>
+
+  <!-- Navbar -->
   <header>
     <%- include('partials/navbar') %>
-</header>
-  
+  </header>
+
+  <!-- Hero Section -->
   <div class="bg-section">
     <div class="container texttt">
       <h1 class="bgtext">
@@ -33,49 +35,52 @@
         strong foundation, shaping young minds into confident learners and
         compassionate individuals.
       </p>
-      <div class="apply-btn">
+      <div class="apply-btn ml-[300px]">
         <a href="/programs">
-          <button  class="btn1">Explore Courses</button>
+          <button class="btn1">Explore Courses</button>
         </a>
-        
       </div>
     </div>
     <div class="container">
       <img class="children" src="/images/children.png" alt="children" />
     </div>
-
   </div>
-  <br />
+  
+
+  <!-- Curve Separator -->
   <div class="curve">
     <img class="curvee" src="/images/curve2.png" alt="curve" />
   </div>
-  <div class="containeryellow">
-    <div class="container-ye">
-      <h1 class="bgtextt">
-        Kidzstar Pre Primary School
-      </h1>
-      <h3 class="bgtexttt text-1xl w-[800px]">"At Kidzstar Pre Primary School, our mission is to provide a safe, stimulating, and inclusive
-        environment where children are encouraged to explore, learn, and develop at their own pace. Through a blend of
-        hands-on activities, creative play, and personalized attention, we aim to build a strong foundation in early
-        childhood education. We are committed to fostering emotional, social, cognitive, and physical growth, ensuring
-        each child is prepared for their next steps in their educational journey."</h3>
-        <br>
-      <div class="apply-btnn flex justify-start">
+
+  <!-- Yellow Section -->
+  <div class="containeryellow flex flex-wrap items-center justify-between px-4">
+    <div class="container-ye max-w-[600px]">
+      <h1 class="bgtextt">Kidzstar Pre Primary School</h1>
+      <h3 class="bgtexttt text-1xl">
+        "At Kidzstar Pre Primary School, our mission is to provide a safe, stimulating, and inclusive environment where
+        children are encouraged to explore, learn, and develop at their own pace. Through a blend of hands-on
+        activities, creative play, and personalized attention, we aim to build a strong foundation in early childhood
+        education. We are committed to fostering emotional, social, cognitive, and physical growth, ensuring each child
+        is prepared for their next steps in their educational journey."
+      </h3>
+      <div class="apply-btn ml-[200px]">
         <a href="/programs">
           <button class="btnn1">Explore Courses</button>
         </a>
-        
       </div>
+      
     </div>
-    <div class="apple1 w-full max-w-[500px] h-auto mx-auto">
+    <div class="apple1 w-full max-w-[500px] mx-auto mt-6 md:mt-0">
       <img src="/images/apple1.png" alt="Apple image" class="w-full h-auto" />
     </div>
   </div>
-  <br />
 
+  <!-- Curve Separator -->
   <div class="curve">
     <img class="curvee" src="/images/curve3.png" alt="curve" />
   </div>
+
+  <!-- Vision Section -->
   <div class="containerpink">
     <div class="text-content">
       <h1 class="main-heading">
@@ -90,49 +95,62 @@
         "To create a nurturing and innovative learning environment where young minds can explore, grow, and develop
         essential skills through play-based learning, fostering creativity, curiosity, and a love for lifelong learning.
         We aim to provide a strong foundation for each child, empowering them to thrive academically, socially, and
-        emotionally in a supportive, inclusive, and joyful setting."
+        emotionally in a supportive, inclusive, and joyful setting."
       </p>
     </div>
   </div>
 
-  <br>
+  <!-- Curve Separator -->
   <div class="curve">
-    <div class="curve">
-      <img class="curvee" src="/images/curve4.png" alt="curve" />
-  </div>
-  
-  <div class="playgroup-container">
-      <div class="playgroup-item">
-          <img src="/images/playgroup.png" alt="Playgroup 1">
-          <p>Little hands, big dreams – where fun and learning begin!</p>
-          <img class="info-image mx-[40px]" src="/images/playgroupdetails.png" alt="Playgroup Info" style="width: 250px; height: auto;">
-      </div>
-      <div class="playgroup-item">
-          <img src="/images/nursery.png" alt="Playgroup 2">
-          <p>A world of wonder, one tiny step at a time.</p>
-          <img class="info-image mx-[60px]" src="/images/nurserydetails.png" alt="Nursery Info" style="width: 250px; height: auto;">
-      </div>
-      <div class="playgroup-item">
-          <img src="/images/jrkg.png" alt="Playgroup 3">
-          <p>Exploring, discovering, and growing every day!</p>
-          <img class="info-image mx-[40px]" src="/images/jrkgdetails.png" alt="Jr KG Info" style="width: 250px; height: auto;">
-      </div>
-      <div class="playgroup-item">
-          <img src="/images/srkg.png" alt="Playgroup 4">
-          <p>Ready to shine, ready to learn – the journey continues!</p>
-          <img class="info-image mx-[80px]" src="/images/srkgdetails.png" alt="Sr KG Info" style="width: 250px; height: auto;">
-      </div>
+    <img class="curvee" src="/images/curve4.png" alt="curve" />
   </div>
 
-  <div class="curve">
-    <div class="curve">
-      <img class="curvee" src="/images/curve5.png" alt="curve" />
-  </div>
-  
- 
-  <br /><br /><br /><br />
+  <!-- Program Sections -->
+  <div class="playgroup-container flex flex-wrap justify-evenly items-start gap-6 mt-10 px-4">
+    <!-- Playgroup -->
+    <div class="playgroup-item text-center max-w-[250px]">
+      <img src="/images/playgroup.png" alt="Playgroup 1" class="w-full h-auto" />
+      <p class="mt-2 text-gray-700">Little hands, big dreams – where fun and learning begin!</p>
+      <img class="info-image mx-auto mt-2" src="/images/playgroupdetails1.png" alt="Playgroup Info"
+        style="width: 250px; height: auto;">
+    </div>
 
-  <header><%- include('partials/footer') %></header>
+    <!-- Nursery -->
+    <div class="playgroup-item text-center max-w-[250px]">
+      <img src="/images/nursery.png" alt="Nursery" class="w-full h-auto" />
+      <p class="mt-2 text-gray-700">A world of wonder, one tiny step at a time.</p>
+      <img class="info-image mx-auto mt-2" src="/images/nurserydetails1.png" alt="Nursery Info"
+        style="width: 250px; height: auto;">
+    </div>
+
+    <!-- Jr KG -->
+    <div class="playgroup-item text-center max-w-[250px]">
+      <img src="/images/jrkg.png" alt="Jr KG" class="w-full h-auto" />
+      <p class="mt-2 text-gray-700">Exploring, discovering, and growing every day!</p>
+      <img class="info-image mx-auto mt-2" src="/images/jrkgdetails1.png" alt="Jr KG Info"
+        style="width: 250px; height: auto;">
+    </div>
+
+    <!-- Sr KG -->
+    <div class="playgroup-item text-center max-w-[250px]">
+      <img src="/images/srkg.png" alt="Sr KG" class="w-full h-auto" />
+      <p class="mt-2 text-gray-700">Ready to shine, ready to learn – the journey continues!</p>
+      <img class="info-image mx-auto mt-2" src="/images/srkgdetails1.png" alt="Sr KG Info"
+        style="width: 250px; height: auto;">
+    </div>
+  </div>
+
+  <!-- Curve Separator -->
+  <div class="curve">
+    <img class="curvee" src="/images/curve5.png" alt="curve" />
+  </div>
+
+  <br /><br />
+
+  <!-- Footer -->
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
 </body>
 
 </html>
