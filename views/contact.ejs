@@ -190,12 +190,14 @@
           class="w-full p-3 mb-4 bg-blue-50 border rounded-md focus:ring-2 focus:ring-blue-400 transition"
         />
 
-        <textarea
-          name="message"
-          placeholder="Additional Message"
-          rows="4"
-          class="w-full p-3 mb-4 bg-blue-50 border rounded-md focus:ring-2 focus:ring-blue-400 transition"
-        ></textarea>
+        <select id="course" name="course" required
+        class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none mb-3">
+        <option value="" disabled selected> Select a course</option>
+        <option value="playgroup">Playgroup</option>
+        <option value="nursery">Nursery</option>
+        <option value="jrkg">Jr. KG</option>
+        <option value="srkg">Sr. KG</option>
+    </select>
 
         <label for="bookslot" class="block mb-2 font-semibold text-gray-700">Book a Slot*</label>
         <input
@@ -233,8 +235,7 @@
   
     <p class="text-lg mb-2"><strong>Working Hours:</strong></p>
     <ul class="mb-4 text-gray-700">
-      <li>Mon - Fri: 9:00 AM – 6:00 PM</li>
-      <li>Saturday: 9:00 AM – 1:00 PM</li>
+      <li>Monday - Saturday: 7:00 AM – 9:00 PM</li>
       <li>Sunday: Closed</li>
     </ul>
   
@@ -283,8 +284,7 @@
   <section class="max-w-6xl mx-auto px-4 pb-16 fade-in-up">
     <h3 class="text-2xl font-semibold mb-4 text-center text-teal-700">Find Us on Google Maps</h3>
     <div class="w-full h-96 rounded-xl overflow-hidden shadow-xl transition hover:shadow-2xl">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1332.0886961548667!2d72.95308237777326!3d19.20761149776563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9734b5b967d%3A0x5392586d568e0581!2sSavarkar%20Nagar%2C%20Thane%20West%2C%20Thane%2C%20Maharashtra%20400606!5e0!3m2!1sen!2sin!4v1742108769485!5m2!1sen!2sin"
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.7596524707096!2d72.94793397188192!3d19.20569728024712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9e4a789d0c5%3A0xa93541f84765b135!2sKIDZSTAR%20PRE%20PRIMARY%20SCHOOL!5e0!3m2!1sen!2sin!4v1747241377379!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         width="100%"
         height="100%"
         style="border:0;"

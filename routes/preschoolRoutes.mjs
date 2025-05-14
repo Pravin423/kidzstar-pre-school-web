@@ -62,9 +62,9 @@ router.get("/admission", (req, res) => {
 router.post("/admission", async (req, res) => {
 
     try {
-        const { name, email, phone, childName, childAge, message,bookslot } = req.body;
+        const { name, email, phone, childName, childAge, course,bookslot } = req.body;
         const formattedDate = new Date(bookslot)
-        await Admission.create({ name, email, phone, childName, childAge, message, bookslot: formattedDate  });
+        await Admission.create({ name, email, phone, childName, childAge, course, bookslot: formattedDate  });
         res.redirect("/success");
     } catch (error) {
         console.error(error);

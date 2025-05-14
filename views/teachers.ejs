@@ -138,9 +138,58 @@ body {
 </section>
 <section>
     <div class="container flex justify-evenly items-center">
-        <div class="form mt-[100px] ml-[10px] bg-black p-[50px] rounded-[10px] w-[511px] h-[1130px]">
-            <h1 class="text-white text-4xl font-bold">click to open enquiry form</h1>
-            <a href="/enquiry"><button class="bg-white w-[100px] h-[50px]">submit</button></a>
+        
+        <div class="form mt-[100px] ml-[10px] bg-gray-900 p-[50px] rounded-[10px] w-[511px] h-[1130px]">
+            <div class="container">
+      <video
+      class="w-[600px] h-[350px] rounded-lg mx-auto object-cover  "  
+      autoplay
+      muted
+      loop
+      src="images/newedited.mp4"
+    ></video>
+    <br>
+    <br>
+
+    </div>
+           <form action="/enquiry" method="POST" class="space-y-5">
+            <div class="flex gap-4">
+                <div class="flex flex-col w-1/2">
+                    <label class="text-gray-400 text-sm mb-1" for="firstname">Firstname</label>
+                    <input id="firstname" type="text" name="firstname" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex flex-col w-1/2">
+                    <label class="text-gray-400 text-sm mb-1" for="lastname">Lastname</label>
+                    <input id="lastname" type="text" name="lastname" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="email">Email</label>
+                <input id="email" type="email" name="email" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="location">Current Location</label>
+                <input id="location" type="text" name="currentLocation" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="phone">Phone Number</label>
+                <input id="phone" type="tel" name="phoneNumber" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="course">Course</label>
+                <select id="course" name="course" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                </select>
+            </div>
+
+            <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Apply</button>
+        </form>
         </div>
         <div class="text mt-[60px]">
             <h1 class="text-black text-3xl font-bold heading relative underline-animation">
@@ -262,6 +311,9 @@ body {
     
 
 </section>
+<br>
+
+
 <br>
 <br>
 <br>

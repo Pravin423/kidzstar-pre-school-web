@@ -6,53 +6,53 @@
     <title>Enquiry</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#1a1a1a] flex items-center justify-center h-screen">
-    
-    <section class="flex items-center justify-center w-full">
-        <div class="flex w-[412px] bg-[#1a1a1a] rounded-[30px] p-8 flex-col items-center justify-start border border-gray-700 shadow-xl">
-            <div class="text-center mb-8">
-                <h1 class="text-3xl font-bold text-blue-400 flex items-center justify-center">
-                    <span class="w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></span>
-                    Enquiry Form
-                </h1>
-                <p class="text-sm text-gray-400 mt-2">Be the key to the future</p>
-            </div>
-        
-            <form action="/enquiry" method="POST" class="w-full max-w-xs">
-                <div class="flex space-x-4 mb-6">
-                    <label class="relative w-1/2">
-                        <input type="text" name="firstname" required class="peer w-full h-12 bg-gray-700 rounded-lg px-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <span class="absolute left-4 top-3 text-gray-400 text-sm peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs transition-all">Firstname</span>
-                    </label>
-                    <label class="relative w-1/2">
-                        <input type="text" name="lastname" required class="peer w-full h-12 bg-gray-700 rounded-lg px-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <span class="absolute left-4 top-3 text-gray-400 text-sm peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs transition-all">Lastname</span>
-                    </label>
-                </div>
-                <label class="relative w-full mb-6 block">
-                    <input type="email" name="email" required class="peer w-full h-12 bg-gray-700 rounded-lg px-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <span class="absolute left-4 top-3 text-gray-400 text-sm peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs transition-all">Email</span>
-                </label>
-                <label class="relative w-full mb-6 block">
-                    <input type="text" name="currentLocation" required class="peer w-full h-12 bg-gray-700 rounded-lg px-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <span class="absolute left-4 top-3 text-gray-400 text-sm peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs transition-all">Current Location</span>
-                </label>
-                <label class="relative w-full mb-6 block">
-                    <input type="tel" name="phoneNumber" required class="peer w-full h-12 bg-gray-700 rounded-lg px-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <span class="absolute left-4 top-3 text-gray-400 text-sm peer-placeholder-shown:top-5 peer-placeholder-shown:text-base peer-focus:top-2 peer-focus:text-xs transition-all">Phone Number</span>
-                </label>
-                <label class="relative w-full mb-8 block">
-                    <select name="course" required class="w-full h-12 bg-gray-700 rounded-lg px-4 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none">
-                        <option value="" disabled selected>Select Course</option>
-                        <option value="course1">Course 1</option>
-                        <option value="course2">Course 2</option>
-                    </select>
-                </label>
-                <button type="submit" class="w-full h-12 bg-green-500 text-white rounded-lg font-bold hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all">Apply</button>
-            </form>
+<body class="bg-[#0d0d0d] flex items-center justify-center min-h-screen">
+
+    <section class="w-full max-w-md p-8 bg-[#121212] rounded-2xl border border-[#2a2a2a]">
+        <div class="mb-8 text-center">
+            <h1 class="text-2xl font-semibold text-white">Enquiry Form</h1>
+            <p class="text-gray-500 text-sm mt-2">Be the key to the future</p>
         </div>
+
+        <form action="/enquiry" method="POST" class="space-y-5">
+            <div class="flex gap-4">
+                <div class="flex flex-col w-1/2">
+                    <label class="text-gray-400 text-sm mb-1" for="firstname">Firstname</label>
+                    <input id="firstname" type="text" name="firstname" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="flex flex-col w-1/2">
+                    <label class="text-gray-400 text-sm mb-1" for="lastname">Lastname</label>
+                    <input id="lastname" type="text" name="lastname" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="email">Email</label>
+                <input id="email" type="email" name="email" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="location">Current Location</label>
+                <input id="location" type="text" name="currentLocation" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="phone">Phone Number</label>
+                <input id="phone" type="tel" name="phoneNumber" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="course">Course</label>
+                <select id="course" name="course" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">Course 2</option>
+                </select>
+            </div>
+
+            <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Apply</button>
+        </form>
     </section>
-   
 
 </body>
-</html> 
+</html>
