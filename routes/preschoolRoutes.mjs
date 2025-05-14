@@ -42,8 +42,8 @@ router.get("/enquiry", (req, res) => {
 router.post("/enquiry", async (req, res) => {
 
     try {
-        const { firstname, lastname, email, currentLocation, phoneNumber, course } = req.body;
-        await Enquiry.create({ firstname, lastname, email, currentLocation, phoneNumber, course  });
+        const { firstname, lastname, email, currentLocation, phoneNumber, course,qualification } = req.body;
+        await Enquiry.create({ firstname, lastname, email, currentLocation, phoneNumber, course,qualification  });
         res.redirect("/success");
     } catch (error) {
         console.error(error);

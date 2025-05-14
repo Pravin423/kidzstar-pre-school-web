@@ -43,11 +43,16 @@
 
             <div class="flex flex-col">
                 <label class="text-gray-400 text-sm mb-1" for="course">Course</label>
-                <select id="course" name="course" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <select id="course" name="course" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
                     <option value="" disabled selected>Select Course</option>
                     <option value="course1">Course 1</option>
                     <option value="course2">Course 2</option>
                 </select>
+            </div>
+            
+            <div class="flex flex-col">
+                <label class="text-gray-400 text-sm mb-1" for="qualification">Highest Qualification</label>
+                <input id="qualification" type="text" name="qualification" required class="bg-transparent border border-gray-600 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
             <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">Apply</button>

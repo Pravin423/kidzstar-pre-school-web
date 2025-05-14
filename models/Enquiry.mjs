@@ -8,6 +8,7 @@ const enquirySchema = new mongoose.Schema({
     currentLocation: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     course: { type: String, required: true },
+    qualification: { type: String, required: true },
     
 });
 
