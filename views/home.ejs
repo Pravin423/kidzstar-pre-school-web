@@ -5,16 +5,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KidzStar</title>
-  <link rel="stylesheet" href="/css/home.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+
+    @keyframes blinkColors {
+      0% {
+        background-color: #ffaa00;
+        color: black;
+      }
+
+      25% {
+        background-color: #ff4500;
+        color: white;
+      }
+
+      50% {
+        background-color: #b50bfe;
+        color: yellow;
+      }
+
+      75% {
+        background-color: #00c3ff;
+        color: black;
+      }
+
+      100% {
+        background-color: #ffaa00;
+        color: black;
+      }
+    }
+
+    .blink-button {
+      animation: blinkColors 0.6s infinite;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-white max-w-full overflow-x-hidden">
   <!-- Announcement Bar -->
-  <div class="announcement">
-    <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="7">
-      Admissions Open!!! Apply Now - Limited Seats Available - Playgroup - Nursery - Jr.Kg - Sr.Kg
-    </marquee>
-    <a href="/admission"><button class="btnapply">Enquiry Now</button></a>
+  <div class="flex flex-col md:flex-row items-center justify-between bg-cyan-100 p-4 border-b border-black w-full">
+    <marquee class="text-black font-bold text-sm md:text-base flex-1">Admissions Open!!! Apply Now - Limited Seats
+      Available - Playgroup - Nursery - Jr.Kg - Sr.Kg</marquee>
+    <a href="/admission">
+      <button class="blink-button text-white font-bold px-5 py-2 rounded-full ml-0 md:ml-4 mt-2 md:mt-0">Enquiry
+        Now</button>
+    </a>
   </div>
 
   <!-- Navbar -->
@@ -23,119 +62,154 @@
   </header>
 
   <!-- Hero Section -->
-  <div class="bg-section">
-    <div class="container texttt">
-      <h1 class="bgtext">
-        "Magical Beginnings, <br />
-        <span class="life1">Lifelong <span class="life2">Learnings "</span></span>
-      </h1>
-      <p class="text2">
-        The early years of childhood are the most magical – a time of wonder,
-        exploration, and endless possibilities. Our mission is to provide a
-        strong foundation, shaping young minds into confident learners and
-        compassionate individuals.
-      </p>
-      <div class="apply-btn ml-[280px]">
-        <a href="/programs">
-          <button class="btn1">Explore Courses</button>
-        </a>
-      </div>
+  <section class="w-full bg-cover bg-center bg-no-repeat flex flex-col-reverse lg:flex-row items-center justify-between p-6 lg:p-16"
+  style="background-image: url('/images/background.png');">
+  
+  <!-- Left Text Content -->
+  <div class="text-white text-center lg:text-left max-w-xl">
+    <h1 class="text-3xl md:text-5xl font-bold leading-tight">
+      "Magical Beginnings,<br />
+      <span class="text-pink-300">Lifelong <span class="text-yellow-300">Learnings"</span></span>
+    </h1>
+    <p class="text-base md:text-lg mt-4 font-semibold text-gray-200">
+      The early years of childhood are the most magical – a time of wonder, exploration, and endless possibilities.
+    </p>
+    <p class="text-base md:text-lg mt-2 text-gray-100">
+      At <span class="font-bold text-pink-200">KidzStar</span>, we nurture every child's natural curiosity and creativity
+      through a safe, engaging, and joyful environment.
+    </p>
+    <p class="text-base md:text-lg mt-2 text-gray-100">
+      Our programs are thoughtfully designed to develop social, emotional, cognitive, and motor skills through hands-on experiences and play.
+    </p>
+    <div class="mt-6">
+      <a href="/programs">
+        <button
+          class="bg-pink-500 hover:bg-yellow-400 text-white hover:text-black px-6 py-3 rounded-full transition duration-300">
+          Explore Courses
+        </button>
+      </a>
     </div>
-    <div class="container">
-      <video
-      class="w-[600px] h-[550px] rounded-lg mx-auto object-cover  "  
+  </div>
+
+  <!-- Right Video Content -->
+  <div class="w-full lg:w-[48%] mt-10 lg:mt-0">
+  <div class="relative w-full max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl bg-black">
+    <video
+      class="w-full h-auto object-contain"
       autoplay
       muted
       loop
+      playsinline
       src="images/homevideo.mp4"
     ></video>
-    </div>
   </div>
-  <br>  
-  
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 
   <!-- Yellow Section -->
-  <div class="containeryellow flex flex-wrap items-center justify-between px-4">
-    <div class="container-ye max-w-[600px]">
-      <h1 class="bgtextt">Kidzstar Pre Primary School</h1>
-      <h3 class="bgtexttt text-1xl">
-        "At Kidzstar Pre Primary School, our mission is to provide a safe, stimulating, and inclusive environment where
-        children are encouraged to explore, learn, and develop at their own pace. Through a blend of hands-on
-        activities, creative play, and personalized attention, we aim to build a strong foundation in early childhood
-        education. We are committed to fostering emotional, social, cognitive, and physical growth, ensuring each child
-        is prepared for their next steps in their educational journey."
-      </h3>
-      <div class="apply-btn ml-[200px]">
-        <a href="/programs">
-          <button class="btnn1">Explore Courses</button>
-        </a>
-      </div>
-      
-    </div>
-    <div class="apple1 w-full max-w-[500px] mx-auto mt-6 md:mt-0">
-      <img src="/images/apple1.png" alt="Apple image" class="w-full h-auto" />
+  <section class="flex flex-col-reverse lg:flex-row items-center justify-center gap-10 bg-cover bg-center py-12 px-6 text-center lg:text-left"
+         style="background-image: url('/images/background2.png');">
+  <!-- Text Content -->
+  <div class="max-w-xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 animate-pulse">
+      Kidzstar Pre Primary School
+    </h2>
+    <p class="mt-4 text-gray-700 text-base md:text-lg leading-relaxed">
+      "At Kidzstar Pre Primary School, our mission is to provide a safe,
+      stimulating, and inclusive environment where children are encouraged to explore,
+      learn, and develop at their own pace. Through a blend of hands-on activities,
+      creative play, and personalized attention, we aim to build a strong foundation
+      in early childhood education."
+    </p>
+    <div class="mt-6">
+      <a href="/programs">
+        <button class="bg-yellow-400 hover:bg-pink-500 text-white hover:text-black px-6 py-3 rounded-full transition">
+          Explore Courses
+        </button>
+      </a>
     </div>
   </div>
 
+  <!-- Image -->
+  <div class="w-full max-w-xs sm:max-w-sm lg:max-w-sm">
+    <img src="/images/apple1.png" alt="Apple" class="w-full h-auto rounded-xl " />
+  </div>
+</section>
+
   <!-- Vision Section -->
-  <div class="containerpink">
-    <div class="text-content">
-      <h1 class="main-heading">
-        A Nurturing <br />
-        Environment Where <br />
-        Every Child Thrives
-      </h1>
-    </div>
-    <div class="vision-content">
-      <h1 class="vision-heading">Our Vision</h1>
-      <p class="vision-text">
+<section
+  class="relative flex flex-col-reverse lg:flex-row items-center justify-center gap-10 bg-pink-50 bg-cover bg-center bg-no-repeat py-12 px-6 text-center lg:text-left"
+  style="background-image: url('/images/boynew2.png'); min-height: 500px;"
+>
+  <!-- Softer Overlay -->
+  <div class="absolute inset-0 bg-white bg-opacity-30 lg:bg-opacity-20"></div>
+
+  <!-- Content Wrapper -->
+  <div class="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-10 w-full max-w-7xl mx-auto">
+    <!-- Vision Content -->
+    <div class="w-full  max-w-xl px-4">
+      <h3 class="text-xl md:text-4xl font-bold text-gray-900 mb-3">Our Vision</h3>
+      <p class="text-base w-[400px] md:text-lg text-gray-700 leading-relaxed">
         "To create a nurturing and innovative learning environment where young minds can explore, grow, and develop
         essential skills through play-based learning, fostering creativity, curiosity, and a love for lifelong learning.
         We aim to provide a strong foundation for each child, empowering them to thrive academically, socially, and
         emotionally in a supportive, inclusive, and joyful setting."
       </p>
     </div>
+
+    <!-- Heading -->
+    <div class="w-full max-w-xl px-4">
+      <h2 class="text-3xl md:text-4xl ml-[200px] font-bold text-gray-800 leading-snug">
+        A Nurturing<br />Environment Where<br />Every Child Thrives
+      </h2>
+    </div>
   </div>
+</section>
+<br>
+
 
   <!-- Program Sections -->
-  <div class="playgroup-container flex flex-wrap justify-evenly items-start gap-6 mt-10 px-4">
+<section class="bg-cover bg-center bg-no-repeat py-10 px-4" style="background-image: url('/images/programback.jpg');">
+  <div class="flex flex-wrap justify-center gap-6">
     <!-- Playgroup -->
-    <div class="playgroup-item text-center max-w-[250px]">
-      <img src="/images/playgroup.png" alt="Playgroup 1" class="w-full h-auto" />
-      <p class="mt-2 text-gray-700">Little hands, big dreams – where fun and learning begin!</p>
-      <img class="info-image mx-auto mt-2" src="/images/playgroupdetails1.png" alt="Playgroup Info"
-        style="width: 250px; height: auto;">
+    <div class="max-w-[250px] text-center p-4 rounded-xl shadow-md bg-opacity-0">
+      <img src="/images/playgroup.png" alt="Playgroup" class="w-full h-auto rounded-lg" />
+      <p class="mt-2 font-semibold text-white bg-yellow-500/80 px-2 py-1 rounded">Little hands, big dreams!</p>
+      <img src="/images/playgroupdetails1.png" alt="Details" class="mt-2 w-full h-auto rounded-lg" />
     </div>
 
     <!-- Nursery -->
-    <div class="playgroup-item text-center max-w-[250px]">
-      <img src="/images/nursery.png" alt="Nursery" class="w-full h-auto" />
-      <p class="mt-2 text-gray-700">A world of wonder, one tiny step at a time.</p>
-      <img class="info-image mx-auto mt-2" src="/images/nurserydetails1.png" alt="Nursery Info"
-        style="width: 250px; height: auto;">
+    <div class="max-w-[250px] text-center p-4 rounded-xl shadow-md bg-opacity-0">
+      <img src="/images/nursery.png" alt="Nursery" class="w-full h-auto rounded-lg" />
+      <p class="mt-2 font-semibold text-white bg-cyan-400/80 px-2 py-1 rounded">A world of wonder!</p>
+      <img src="/images/nurserydetails1.png" alt="Details" class="mt-2 w-full h-auto rounded-lg" />
     </div>
 
     <!-- Jr KG -->
-    <div class="playgroup-item text-center max-w-[250px]">
-      <img src="/images/jrkg.png" alt="Jr KG" class="w-full h-auto" />
-      <p class="mt-2 text-gray-700">Exploring, discovering, and growing every day!</p>
-      <img class="info-image mx-auto mt-2" src="/images/jrkgdetails1.png" alt="Jr KG Info"
-        style="width: 250px; height: auto;">
+    <div class="max-w-[250px] text-center p-4 rounded-xl shadow-md bg-opacity-0">
+      <img src="/images/jrkg.png" alt="Jr KG" class="w-full h-auto rounded-lg" />
+      <p class="mt-2 font-semibold text-white bg-pink-500/80 px-2 py-1 rounded">Discovering and growing!</p>
+      <img src="/images/jrkgdetails1.png" alt="Details" class="mt-2 w-full h-auto rounded-lg" />
     </div>
 
     <!-- Sr KG -->
-    <div class="playgroup-item text-center max-w-[250px]">
-      <img src="/images/srkg.png" alt="Sr KG" class="w-full h-auto" />
-      <p class="mt-2 text-gray-700">Ready to shine, ready to learn – the journey continues!</p>
-      <img class="info-image mx-auto mt-2" src="/images/srkgdetails1.png" alt="Sr KG Info"
-        style="width: 250px; height: auto;">
+    <div class="max-w-[250px] text-center p-4 rounded-xl shadow-md bg-opacity-0">
+      <img src="/images/srkg.png" alt="Sr KG" class="w-full h-auto rounded-lg" />
+      <p class="mt-2 font-semibold text-white bg-red-500/80 px-2 py-1 rounded">Ready to shine!</p>
+      <img src="/images/srkgdetails1.png" alt="Details" class="mt-2 w-full h-auto rounded-lg" />
     </div>
   </div>
-
-  <br />
+</section>
+>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-gray-800 text-white mt-10">
     <%- include('partials/footer') %>
   </footer>
 </body>

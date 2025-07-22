@@ -113,6 +113,39 @@
         transform: rotate(0deg) scale(1);
         z-index: 2;
       }
+
+      /* Playgroup item styles for responsiveness */
+      .playgroup-item {
+        width: 22%; /* Adjust as needed for spacing */
+        max-width: 200px; /* Limit individual item width */
+      }
+      .playgroup-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px; /* Added border-radius for aesthetic */
+      }
+
+      /* Adjust for smaller screens */
+      @media (max-width: 768px) {
+        .playgroup-container {
+          flex-wrap: wrap; /* Allow items to wrap to next line */
+          justify-center; /* Center items when wrapped */
+        }
+        .playgroup-item {
+          width: 45%; /* Two items per row on smaller screens */
+          margin-bottom: 20px; /* Add some vertical space */
+        }
+        .playgroup-item:nth-last-child(1),
+        .playgroup-item:nth-last-child(2) {
+          margin-bottom: 0; /* Remove bottom margin for the last two items */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .playgroup-item {
+          width: 90%; /* One item per row on very small screens */
+        }
+      }
     </style>
   </head>
 
@@ -120,29 +153,29 @@
     <header><%- include('partials/navbar') %></header>
 
     <section
-      class="w-full h-[450px] items-center bg-cover bg-center py-32"
+      class="w-full h-[300px] md:h-[450px] items-center bg-cover bg-center py-10 md:py-32"
       style="background-image: url('/images/programbackground1.png')"
     >
-      <h1 class="text-white mx-9 text-5xl justify-center align font-bold">
+      <h1 class="text-white mx-5 md:mx-9 text-3xl md:text-5xl font-bold text-center md:text-left">
         Welcome to Kidzstar <br />
-        <p class="ml-[100px]">Pre-School</p>
+        <p class="ml-0 md:ml-[100px]">Pre-School</p>
       </h1>
       <br />
-      <p class="text-white ml-[190px] font-semibold text-2xl">All Programs</p>
+      <p class="text-white ml-0 md:ml-[190px] font-semibold text-xl md:text-2xl text-center md:text-left">All Programs</p>
     </section>
 
     <section>
-      <div class="container w-full flex justify-evenly mx-auto mt-10">
-        <div class="w-[850px] mx-auto mt-10">
+      <div class="container w-full flex flex-col lg:flex-row justify-evenly mx-auto mt-10 p-4">
+        <div class="w-full lg:w-[850px] mx-auto mt-5 lg:mt-10">
           <h1
-            class="text-4xl font-bold text-center text-purple-800 leading-tight"
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-purple-800 leading-tight"
           >
             A lifetime of Learning & Adventure<br />
             Begins here.
           </h1>
           <div class="mt-4 bg-white p-2">
             <video
-              class="w-[600px] h-[350px] rounded-lg bg-gray-50 mx-auto"
+              class="w-full max-w-[600px] h-[200px] sm:h-[250px] md:h-[350px] rounded-lg bg-gray-50 mx-auto"
               autoplay
               muted
               loop
@@ -150,18 +183,18 @@
             ></video>
             <br />
             <h1
-              class="text-5xl font-bold text-center text-yellow-400 leading-tight"
+              class="text-xl sm:text-3xl md:text-5xl font-bold text-center text-yellow-400 leading-tight"
             >
               Step into a world where curiosity is nurtured – enroll today!
             </h1>
           </div>
         </div>
 
-        <div class="w-1/2 mx-auto p-4">
+        <div class="w-full lg:w-1/2 mx-auto p-4 mt-10 lg:mt-0">
           <form
             action="/admission"
             method="POST"
-            class="bg-white p-8 border-gray-200 shadow-lg w-full max-w-lg mx-auto"
+            class="bg-white p-8 border-gray-200 shadow-lg w-full max-w-lg mx-auto rounded-lg"
           >
             <h1 class="text-3xl font-bold text-center text-blue-800 mb-6">
               Enquire Now
@@ -240,7 +273,7 @@
 
             <button
               type="submit"
-              class="w-[100px] bg-yellow-400 hover:bg-green-700 ml-[185px] text-black font-semibold p-3 rounded-md shadow-md transition duration-300"
+              class="w-full md:w-[100px] bg-yellow-400 hover:bg-green-700 mx-auto md:ml-[185px] text-black font-semibold p-3 rounded-md shadow-md transition duration-300 block"
             >
               Submit
             </button>
@@ -249,124 +282,191 @@
       </div>
     </section>
 
-    <section class="flex mt-10">
-      <div class="playgroup-container w-full flex justify-evenly mx-auto mt-10">
-    
-        <!-- Playgroup 1 -->
-        <a href="#" onclick="openModal('modal1')">
-          <div class="playgroup-item">
-            <img src="/images/playgroup.png" alt="Playgroup 1" />
-          </div>
-        </a>
-    
-        <!-- Playgroup 2 -->
-        <a href="#" onclick="openModal('modal2')">
-          <div class="playgroup-item">
-            <img src="/images/nursery.png" alt="Playgroup 2" />
-          </div>
-        </a>
-    
-        <!-- Playgroup 3 -->
-        <a href="#" onclick="openModal('modal3')">
-          <div class="playgroup-item">
-            <img src="/images/jrkg.png" alt="Playgroup 3" />
-          </div>
-        </a>
-    
-        <!-- Playgroup 4 -->
-        <a href="#" onclick="openModal('modal4')">
-          <div class="playgroup-item p-2">
-            <img src="/images/srkg.png" alt="Playgroup 4" />
-          </div>
-        </a>
-    
+   <section class="flex flex-col items-center mt-10">
+  <div class="playgroup-container w-full flex flex-wrap justify-center gap-6 md:gap-12 mx-auto mt-10 px-4">
+    <a href="#" onclick="openModal('modal1')" class="playgroup-item block w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 max-w-xs">
+      <img src="/images/playgroup.png" alt="Playgroup 1" class="w-full h-auto rounded-xl shadow-md transition-transform transform hover:scale-105" />
+    </a>
+
+    <a href="#" onclick="openModal('modal2')" class="playgroup-item block w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 max-w-xs">
+      <img src="/images/nursery.png" alt="Playgroup 2" class="w-full h-auto rounded-xl shadow-md transition-transform transform hover:scale-105" />
+    </a>
+
+    <a href="#" onclick="openModal('modal3')" class="playgroup-item block w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 max-w-xs">
+      <img src="/images/jrkg.png" alt="Playgroup 3" class="w-full h-auto rounded-xl shadow-md transition-transform transform hover:scale-105" />
+    </a>
+
+    <a href="#" onclick="openModal('modal4')" class="playgroup-item block w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 max-w-xs">
+      <img src="/images/srkg.png" alt="Playgroup 4" class="w-full h-auto rounded-xl shadow-md transition-transform transform hover:scale-105" />
+    </a>
+  </div>
+</section>
+<br />
+<div
+  id="modal1"
+  class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4"
+>
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-xl lg:max-w-2xl p-8 relative">
+    <button
+      onclick="closeModal('modal1')"
+      class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold"
+    >
+      &times;
+    </button>
+    <div class="text-center">
+      <img
+        src="/images/playgroup.png"
+        alt="Playgroup"
+        class="w-32 h-32 mx-auto mb-4 rounded-full"
+      />
+      <h2 class="text-3xl font-bold text-blue-600 mb-2">Playgroup</h2>
+      <p class="text-lg text-gray-600 mb-4">
+        Welcome to our Playgroup! We nurture your child’s early learning
+        through fun activities, music, and creative expression in a safe and
+        loving environment.
+        Age Group: 2.5 – 3.5 yrs
+      </p>
+      <button
+        onclick="closeModal('modal1')"
+        class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg mt-4 shadow text-lg"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  id="modal2"
+  class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4"
+>
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-xl lg:max-w-2xl p-8 relative">
+    <button
+      onclick="closeModal('modal2')"
+      class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold"
+    >
+      &times;
+    </button>
+    <div class="text-center">
+      <img
+        src="/images/nursery.png"
+        alt="Nursery"
+        class="w-32 h-32 mx-auto mb-4 rounded-full"
+      />
+      <h2 class="text-3xl font-bold text-green-600 mb-2">Nursery</h2>
+      <p class="text-lg text-gray-600 mb-4">
+        In Nursery, we focus on developing essential skills like language,
+        motor abilities, and social interaction through guided play and
+        storytelling.
+        Age Group: 3.5 – 4.5 yrs
+      </p>
+      <button
+        onclick="closeModal('modal2')"
+        class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg mt-4 shadow text-lg"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<div
+  id="modal3"
+  class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4"
+>
+  <div class="bg-white rounded-2xl shadow-lg w-full max-w-xl lg:max-w-2xl p-8 relative">
+    <button
+      onclick="closeModal('modal3')"
+      class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold"
+    >
+      &times;
+    </button>
+    <div class="text-center">
+      <img
+        src="/images/jrkg.png"
+        alt="Junior KG"
+        class="w-32 h-32 mx-auto mb-4 rounded-full"
+      />
+      <h2 class="text-3xl font-bold text-purple-600 mb-2">Junior KG</h2>
+      <p class="text-lg text-gray-600 mb-4">
+        Junior KG introduces early academic learning in an engaging way,
+        with basic literacy, numeracy, and creative projects that spark
+        curiosity.
+        Age Group: 4.5 – 5.5 yrs
+      </p>
+      <button
+        onclick="closeModal('modal3')"
+        class="bg-purple-500 hover:bg-purple-600 text-white px-8 py-3 rounded-lg mt-4 shadow text-lg"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+</div>
+
+    <div
+      id="modal4"
+      class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
+        <button
+          onclick="closeModal('modal4')"
+          class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold"
+        >
+          &times;
+        </button>
+        <div class="text-center">
+          <img
+            src="/images/srkg.png"
+            alt="Senior KG"
+            class="w-24 h-24 mx-auto mb-4 rounded-full"
+          />
+          <h2 class="text-2xl font-bold text-orange-600 mb-2">Senior KG</h2>
+          <p class="text-gray-600 mb-4">
+            Senior KG prepares children for primary school with structured
+            activities in math, reading, science, and social skills in a
+            supportive environment.
+            
+          </p>
+          <button
+            onclick="closeModal('modal4')"
+            class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg mt-2 shadow"
+          >
+            Close
+          </button>
+        </div>
       </div>
-    </section>
-    <br>
-    <!-- Modal Templates -->
-    <!-- Modal 1 -->
-<div id="modal1" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
-  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
-    <button onclick="closeModal('modal1')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
-    <div class="text-center">
-      <img src="/images/playgroup.png" alt="Playgroup" class="w-fit h-24 mx-auto mb-4 rounded-full ">
-      <h2 class="text-2xl font-bold text-blue-600 mb-2">Playgroup</h2>
-      <p class="text-gray-600 mb-4">Welcome to our Playgroup! We nurture your child’s early learning through fun activities, music, and creative expression in a safe and loving environment.</p>
-      <button onclick="closeModal('modal1')" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
     </div>
-  </div>
-</div>
 
-<!-- Modal 2 -->
-<div id="modal2" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
-  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
-    <button onclick="closeModal('modal2')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
-    <div class="text-center">
-      <img src="/images/nursery.png" alt="Nursery" class="w-fit h-24 mx-auto mb-4 rounded-full ">
-      <h2 class="text-2xl font-bold text-green-600 mb-2">Nursery</h2>
-      <p class="text-gray-600 mb-4">In Nursery, we focus on developing essential skills like language, motor abilities, and social interaction through guided play and storytelling.</p>
-      <button onclick="closeModal('modal2')" class="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal 3 -->
-<div id="modal3" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
-  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
-    <button onclick="closeModal('modal3')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
-    <div class="text-center">
-      <img src="/images/jrkg.png" alt="Junior KG" class="w-fit h-24 mx-auto mb-4 rounded-full ">
-      <h2 class="text-2xl font-bold text-purple-600 mb-2">Junior KG</h2>
-      <p class="text-gray-600 mb-4">Junior KG introduces early academic learning in an engaging way, with basic literacy, numeracy, and creative projects that spark curiosity.</p>
-      <button onclick="closeModal('modal3')" class="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal 4 -->
-<div id="modal4" class="modal hidden fixed inset-0 z-50 bg-black bg-opacity-60 backdrop-blur-sm flex items-center justify-center">
-  <div class="bg-white rounded-2xl shadow-lg w-full max-w-lg p-8 relative">
-    <button onclick="closeModal('modal4')" class="absolute top-4 right-4 text-gray-400 hover:text-red-500 text-2xl font-bold">&times;</button>
-    <div class="text-center">
-      <img src="/images/srkg.png" alt="Senior KG" class="w-fit h-24 mx-auto mb-4 rounded-full ">
-      <h2 class="text-2xl font-bold text-orange-600 mb-2">Senior KG</h2>
-      <p class="text-gray-600 mb-4">Senior KG prepares children for primary school with structured activities in math, reading, science, and social skills in a supportive environment.</p>
-      <button onclick="closeModal('modal4')" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg mt-2 shadow">Close</button>
-    </div>
-  </div>
-</div>
-
-    
     <br />
 
     <section
-      class="w-100 min-h-screen flex items-center justify-center bg-cover bg-center py-32"
+      class="w-full min-h-screen flex items-center justify-center bg-cover bg-center py-10 md:py-32"
       style="background-image: url('/images/afteraboutback.png')"
     >
-      <div class="container mx-auto flex items-center justify-between w-full">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between w-full p-4">
         <div
           id="quoteBox"
-          class="items-center mx-[40px] rounded-[30px] w-[500px] h-[200px] bg-gray-200 opacity-0 translate-y-8 transition-all duration-1000 ease-in-out"
+          class="items-center mx-auto lg:mx-[40px] rounded-[30px] w-full max-w-[500px] h-[200px] bg-gray-200 opacity-0 translate-y-8 transition-all duration-1000 ease-in-out flex flex-col justify-center"
         >
           <h1
-            class="text-3xl mt-[40px] font-bold text-center text-yellow-400 leading-tight"
+            class="text-2xl md:text-3xl mt-5 md:mt-[40px] font-bold text-center text-yellow-400 leading-tight"
           >
             "It always seems impossible until it's done."!
           </h1>
           <p
-            class="text-1xl font-bold text-center text-yellow-900 leading-tight"
+            class="text-base md:text-xl font-bold text-center text-yellow-900 leading-tight"
           >
             -Nelson Mandela
           </p>
         </div>
 
-        <!-- Second div -->
-        <div class="container2 w-[700px] mx-auto text-black">
-          <h1 class="text-yellow-400">Why choose us</h1>
-          <h1 class="text-4xl font-bold">We give your child better values</h1>
+        <div class="container2 w-full lg:w-[700px] mx-auto text-black mt-10 lg:mt-0">
+          <h1 class="text-yellow-400 text-xl font-bold text-center lg:text-left">Why choose us</h1>
+          <h1 class="text-3xl md:text-4xl font-bold text-center lg:text-left">We give your child better values</h1>
           <br />
 
-          <p class="text-xl font-semibold">
+          <p class="text-lg md:text-xl font-semibold text-center lg:text-left">
             At Rainbow Pre-School International, We believe that the finest way
             to develop a child's mind is to take a mix of unstructured and
             supervised play, in appealing and engaging learning environments and
@@ -375,17 +475,9 @@
           </p>
           <br />
           <div
-            class="jiggle-on-hover"
-            style="
-              width: screen;
-              border: 4px dashed #ff6200;
-              border-radius: 20px;
-              padding: 10px;
-              margin-top: 10px;
-              position: relative;
-            "
+            class="jiggle-on-hover p-4 rounded-2xl border-4 border-dashed border-orange-500 mt-4 max-w-lg mx-auto lg:mx-0"
           >
-            <p class="text-2xl font-bold">Certified Teachers</p>
+            <p class="text-xl md:text-2xl font-bold">Certified Teachers</p>
             <p>
               Our Educators are completely certified, exceptionally experienced,
               and fiercely committed to their jobs.
@@ -393,17 +485,9 @@
           </div>
           <br />
           <div
-            class="jiggle-on-hover"
-            style="
-              width: screen;
-              border: 4px dashed #03a92a;
-              border-radius: 20px;
-              padding: 10px;
-              margin-top: 10px;
-              position: relative;
-            "
+            class="jiggle-on-hover p-4 rounded-2xl border-4 border-dashed border-green-500 mt-4 max-w-lg mx-auto lg:mx-0"
           >
-            <p class="text-2xl font-bold">Facility</p>
+            <p class="text-xl md:text-2xl font-bold">Facility</p>
             <p>
               Two Teachers per Classroom, CCTV Enabled, Spacious & Air
               Conditioned and Child Friendly & Smart Classrooms.
@@ -411,17 +495,9 @@
           </div>
           <br />
           <div
-            class="jiggle-on-hover"
-            style="
-              width: screen;
-              border: 4px dashed #030588;
-              border-radius: 20px;
-              padding: 10px;
-              margin-top: 10px;
-              position: relative;
-            "
+            class="jiggle-on-hover p-4 rounded-2xl border-4 border-dashed border-blue-800 mt-4 max-w-lg mx-auto lg:mx-0"
           >
-            <p class="text-2xl font-bold">Curriculum</p>
+            <p class="text-xl md:text-2xl font-bold">Curriculum</p>
             <p>
               Learning goes beyond books, events & celebrations with 100%
               participation and Teaching Resources include audio-visual aids,
@@ -437,14 +513,14 @@
       style="background-image: url('/images/testimg2.png')"
     >
       <div
-        class="container mx-auto flex flex-col items-center justify-center w-full"
+        class="container mx-auto flex flex-col items-center justify-center w-full px-4"
       >
         <h1
-          class="text-5xl font-bold text-center text-blue-700 font-bold underline-animation leading-tight"
+          class="text-3xl md:text-5xl font-bold text-center text-blue-700 font-bold underline-animation leading-tight"
         >
           Our Little Learners' World !!
         </h1>
-        <p class="text-xl font-semibold text-center">
+        <p class="text-base md:text-xl font-semibold text-center mt-2">
           From hands-on fun to heartwarming traditions — our programs spark joy
           and growth in every child’s journey.
         </p>
@@ -453,12 +529,10 @@
       <br />
 
       <div
-        class="container mx-auto flex flex-col md:flex-row justify-evenly gap-10 px-4"
+        class="container mx-auto flex flex-col lg:flex-row justify-evenly gap-8 px-4"
       >
-        <!-- Part 1 -->
-        <div class="flex gap-4 p-4 rounded-lg w-fit">
-          <!-- Left Large Image -->
-          <div class="card w-[300px] h-[370px]">
+        <div class="flex flex-col sm:flex-row gap-4 p-4 rounded-lg w-full justify-center">
+          <div class="card w-full sm:w-[300px] h-[250px] sm:h-[370px] mx-auto">
             <div class="first-content">
               <img
                 src="/images/vertical11.png"
@@ -475,9 +549,8 @@
             </div>
           </div>
 
-          <!-- Right Two Images -->
-          <div class="flex flex-col gap-4">
-            <div class="card w-[300px] h-[180px]">
+          <div class="flex flex-col gap-4 w-full sm:w-[300px] mx-auto">
+            <div class="card w-full h-[180px]">
               <div class="first-content">
                 <img
                   src="/images/hor22.png"
@@ -493,7 +566,7 @@
                 />
               </div>
             </div>
-            <div class="card w-[300px] h-[180px]">
+            <div class="card w-full h-[180px]">
               <div class="first-content">
                 <img
                   src="/images/hor11.png"
@@ -512,10 +585,8 @@
           </div>
         </div>
 
-        <!-- Part 2 -->
-        <div class="flex gap-4 p-4 rounded-lg w-fit md:mt-[200px]">
-          <!-- Left Large Image -->
-          <div class="card w-[300px] h-[370px]">
+        <div class="flex flex-col sm:flex-row gap-4 p-4 rounded-lg w-full justify-center lg:mt-[200px]">
+          <div class="card w-full sm:w-[300px] h-[250px] sm:h-[370px] mx-auto">
             <div class="first-content">
               <img
                 src="/images/vertical22.png"
@@ -532,9 +603,8 @@
             </div>
           </div>
 
-          <!-- Right Two Images -->
-          <div class="flex flex-col gap-4">
-            <div class="card w-[300px] h-[180px]">
+          <div class="flex flex-col gap-4 w-full sm:w-[300px] mx-auto">
+            <div class="card w-full h-[180px]">
               <div class="first-content">
                 <img
                   src="/images/hor3updated.png"
@@ -550,7 +620,7 @@
                 />
               </div>
             </div>
-            <div class="card w-[300px] h-[180px]">
+            <div class="card w-full h-[180px]">
               <div class="first-content">
                 <img
                   src="/images/hor44.png"
